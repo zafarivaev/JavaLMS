@@ -1,35 +1,28 @@
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
+import javax.swing.*;
 
 public class User {
 
     public static void main(String[] args) {
-
-        //Test frame
-        JFrame f = new JFrame("A JFrame");
-        f.setSize(250, 250);
-        f.setLocation(300,200);
-        final JTextArea textArea = new JTextArea(10, 40);
-        f.getContentPane().add(BorderLayout.CENTER, textArea);
-        final JButton button = new JButton("Click Me");
-        f.getContentPane().add(BorderLayout.SOUTH, button);
-        button.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                textArea.append("Button was clicked\n");
-
-            }
-        });
-
-        f.setVisible(true);
-
+        setupUI();
     }
 
+    private static void setupUI() {
+        Dimension screenSize = Helper.shared.getScreenSize();
+
+        JFrame frame = new JFrame("JavaLMS");
+        frame.setSize((int)(screenSize.width * 0.5), (int)(screenSize.height * 0.5));
+        frame.setLocation((int)(screenSize.width * 0.25), (int)(screenSize.height * 0.25));
+
+        JPanel panel = new JPanel();
+        frame.add(panel, BorderLayout.NORTH);
+
+        JLabel lmsLabel = new JLabel("Library Management System");
+        lmsLabel.setFont(new Font("Avenir", Font.PLAIN, 30));
+        panel.add(lmsLabel, BorderLayout.CENTER);
+
+        frame.setVisible(true);
+    }
 
 }
