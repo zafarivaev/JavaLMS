@@ -8,4 +8,8 @@ public class Helper {
     public Dimension getScreenSize() {
         return Toolkit.getDefaultToolkit().getScreenSize();
     }
+
+    public void print(String message) {
+        System.out.println(message);
+    }
 }
