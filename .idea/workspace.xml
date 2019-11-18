@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f325a367-ddef-449a-9568-0f7deacc935f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="f325a367-ddef-449a-9568-0f7deacc935f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573924471730</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Setup Welcome Screen">
+      <created>1574095382610</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574095382610</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change comment" />
     <MESSAGE value="Test Frame added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Frame added" />
+    <MESSAGE value="Setup Welcome Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup Welcome Screen" />
   </component>
 </project>
