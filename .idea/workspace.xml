@@ -45,8 +45,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="User" />
+    <configuration name="Authorization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Authorization" />
       <module name="JavaLMS" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -54,7 +54,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.User" />
+        <item itemvalue="Application.Authorization" />
       </list>
     </recent_temporary>
   </component>
@@ -69,6 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1573919546536</updated>
       <workItem from="1573922700849" duration="630000" />
+      <workItem from="1573926277736" duration="449000" />
+      <workItem from="1574092186530" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Change comment">
       <created>1573923543228</created>
