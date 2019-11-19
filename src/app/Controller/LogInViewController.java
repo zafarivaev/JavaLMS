@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Authorization {
+public class LogInViewController {
 
     public static void main(String[] args) {
         setupUI();

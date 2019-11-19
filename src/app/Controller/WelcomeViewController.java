@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class UserViewController extends ViewController {
+public class WelcomeViewController extends ViewController {
 
     public static void main(String[] args) {
         setupUI();
@@ -38,7 +38,7 @@ public class UserViewController extends ViewController {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 Helper.shared.print("Admin clicked");
-                Authorization auth = new Authorization();
+                LogInViewController auth = new LogInViewController();
                 window.setVisible(false);
                 window.dispose();
                 auth.setupUI();
