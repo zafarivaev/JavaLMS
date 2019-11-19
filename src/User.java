@@ -36,8 +36,9 @@ public class User {
 
         mainPanel.add(topLabelsPanel, BorderLayout.NORTH);
 
-        buttonsPanel = new JPanel(new FlowLayout());
+        buttonsPanel = new JPanel(new GridLayout());
 
+        buttonsPanel.setSize(100,200);
 
         adminButton = new JButton();
         adminButton.setText("Admin");
