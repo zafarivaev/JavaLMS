@@ -1,26 +1,19 @@
+package app.Controller;
+
+import app.Util.Helper;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class User {
+public class WelcomeViewController extends ViewController {
 
     public static void main(String[] args) {
-        setupWindow();
+        setupUI();
     }
 
-    //Window setup
-    private static void setupWindow() {
-        Dimension screenSize = Helper.shared.getScreenSize();
-
-        window = new JFrame("Library Management System");
-        window.setSize((int)(screenSize.width * 0.5), (int)(screenSize.height * 0.5));
-        window.setLocation((int)(screenSize.width * 0.25), (int)(screenSize.height * 0.25));
-        setupUI(window);
-        window.setVisible(true);
-    }
-
-    private static void setupUI(JFrame window) {
+    public static void setupUI() {
         mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
@@ -45,6 +38,10 @@ public class User {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 Helper.shared.print("Admin clicked");
+                LogInViewController auth = new LogInViewController();
+                window.setVisible(false);
+                window.dispose();
+                auth.setupUI();
             }
         });
 
@@ -73,10 +70,11 @@ public class User {
         mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
         window.add(mainPanel);
+        window.setVisible(true);
     }
 
+
     //Properties
-    static JFrame window;
     static JPanel mainPanel;
     static JPanel topLabelsPanel;
     static JLabel lmsLabel;
