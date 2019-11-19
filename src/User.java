@@ -9,6 +9,7 @@ public class User {
         setupWindow();
     }
 
+    //Window setup
     private static void setupWindow() {
         Dimension screenSize = Helper.shared.getScreenSize();
 
