@@ -24,7 +24,7 @@ public class User {
         mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        topLabelsPanel = new JPanel(new BorderLayout());
+        topLabelsPanel = new JPanel(new GridLayout());
 
         lmsLabel = new JLabel("Library Management System");
         lmsLabel.setFont(new Font("Avenir", Font.PLAIN, 30));
@@ -41,6 +41,7 @@ public class User {
 
         adminButton = new JButton();
         adminButton.setText("Admin");
+        adminButton.setPreferredSize(new Dimension(200,100));
         adminButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
