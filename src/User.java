@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Flow;
 import javax.swing.*;
 import javax.swing.border.Border;
 
@@ -36,11 +37,11 @@ public class User {
 
         mainPanel.add(topLabelsPanel, BorderLayout.NORTH);
 
-        buttonsPanel = new JPanel(new FlowLayout());
-
+        buttonsPanel = new JPanel(new GridLayout(1, 3, 10, 10));
 
         adminButton = new JButton();
         adminButton.setText("Admin");
+        adminButton.setPreferredSize(new Dimension(0, 70));
         adminButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -48,7 +49,7 @@ public class User {
             }
         });
 
-        buttonsPanel.add(adminButton, FlowLayout.LEFT);
+        buttonsPanel.add(adminButton);
 
         librarianButton = new JButton();
         librarianButton.setText("Librarian");
@@ -58,7 +59,7 @@ public class User {
                 Helper.shared.print("Librarian clicked");
             }
         });
-        buttonsPanel.add(librarianButton, FlowLayout.CENTER);
+        buttonsPanel.add(librarianButton);
 
         studentButton = new JButton();
         studentButton.setText("Student");
@@ -68,10 +69,7 @@ public class User {
                 Helper.shared.print("Student clicked");
             }
         });
-        buttonsPanel.add(studentButton, FlowLayout.RIGHT);
-
-        Border blackBorder = BorderFactory.createLineBorder(Color.black);
-        buttonsPanel.setBorder(blackBorder);
+        buttonsPanel.add(studentButton);
 
         mainPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
