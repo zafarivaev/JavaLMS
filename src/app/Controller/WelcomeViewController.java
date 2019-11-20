@@ -14,6 +14,7 @@ public class WelcomeViewController extends ViewController {
     }
 
     public static void setupUI() {
+        window.setTitle("Library Management System");
         mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
@@ -38,10 +39,10 @@ public class WelcomeViewController extends ViewController {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 Helper.shared.print("Admin clicked");
-                LogInViewController auth = new LogInViewController();
-                window.setVisible(false);
+                LogInViewController logInVC = new LogInViewController();
+                window.removeAll();
                 window.dispose();
-                auth.setupUI();
+                logInVC.setupUI();
             }
         });
 
@@ -75,13 +76,13 @@ public class WelcomeViewController extends ViewController {
 
 
     //Properties
-    static JPanel mainPanel;
-    static JPanel topLabelsPanel;
-    static JLabel lmsLabel;
-    static JLabel iamLabel;
-    static JPanel buttonsPanel;
-    static JButton adminButton;
-    static JButton librarianButton;
-    static JButton studentButton;
+    private static JPanel mainPanel;
+    private static JPanel topLabelsPanel;
+    private static JLabel lmsLabel;
+    private static JLabel iamLabel;
+    private static JPanel buttonsPanel;
+    private static JButton adminButton;
+    private static JButton librarianButton;
+    private static JButton studentButton;
 
 }

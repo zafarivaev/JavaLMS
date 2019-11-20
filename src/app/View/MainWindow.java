@@ -12,5 +12,4 @@ public class MainWindow extends JFrame {
         this.setSize((int)(screenSize.width * 0.5), (int)(screenSize.height * 0.5));
         this.setLocation((int)(screenSize.width * 0.25), (int)(screenSize.height * 0.25));
     }
-
 }
