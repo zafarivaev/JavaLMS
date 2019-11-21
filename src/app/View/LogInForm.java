@@ -12,6 +12,7 @@ public class LogInForm {
     public JButton logInButton;
     public JButton registerButton;
     public JPasswordField passwordField1;
+    public JLabel titleLabel;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("LogInForm");
@@ -56,13 +57,13 @@ public class LogInForm {
         Title.setPreferredSize(new Dimension(24, 80));
         Main.add(Title, BorderLayout.NORTH);
         Title.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0), null));
-        final JLabel label1 = new JLabel();
-        Font label1Font = this.$$$getFont$$$("Arial", Font.BOLD, 28, label1.getFont());
-        if (label1Font != null) label1.setFont(label1Font);
-        label1.setHorizontalAlignment(0);
-        label1.setMinimumSize(new Dimension(41, 16));
-        label1.setText("Admin");
-        Title.add(label1, BorderLayout.CENTER);
+        titleLabel = new JLabel();
+        Font titleLabelFont = this.$$$getFont$$$("Arial", Font.BOLD, 28, titleLabel.getFont());
+        if (titleLabelFont != null) titleLabel.setFont(titleLabelFont);
+        titleLabel.setHorizontalAlignment(0);
+        titleLabel.setMinimumSize(new Dimension(41, 16));
+        titleLabel.setText("Admin");
+        Title.add(titleLabel, BorderLayout.CENTER);
         Register = new JPanel();
         Register.setLayout(new BorderLayout(0, 0));
         Register.setOpaque(false);
@@ -71,15 +72,15 @@ public class LogInForm {
         registerButton.setOpaque(false);
         registerButton.setText("Register");
         Register.add(registerButton, BorderLayout.SOUTH);
-        final JLabel label2 = new JLabel();
-        label2.setHorizontalAlignment(0);
-        label2.setOpaque(false);
-        label2.setPreferredSize(new Dimension(103, 26));
-        label2.setText("No Account Yet?");
-        label2.setVerifyInputWhenFocusTarget(true);
-        label2.setVerticalAlignment(1);
-        label2.setVerticalTextPosition(0);
-        Register.add(label2, BorderLayout.NORTH);
+        final JLabel label1 = new JLabel();
+        label1.setHorizontalAlignment(0);
+        label1.setOpaque(false);
+        label1.setPreferredSize(new Dimension(103, 26));
+        label1.setText("No Account Yet?");
+        label1.setVerifyInputWhenFocusTarget(true);
+        label1.setVerticalAlignment(1);
+        label1.setVerticalTextPosition(0);
+        Register.add(label1, BorderLayout.NORTH);
         Credentials = new JPanel();
         Credentials.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(3, 1, new Insets(0, 0, 20, 0), -1, -1));
         Credentials.setOpaque(false);
@@ -88,11 +89,11 @@ public class LogInForm {
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
         panel1.setOpaque(false);
         Credentials.add(panel1, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        final JLabel label3 = new JLabel();
-        Font label3Font = this.$$$getFont$$$("Arial", Font.BOLD, 20, label3.getFont());
-        if (label3Font != null) label3.setFont(label3Font);
-        label3.setText("Log In");
-        panel1.add(label3, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final JLabel label2 = new JLabel();
+        Font label2Font = this.$$$getFont$$$("Arial", Font.BOLD, 20, label2.getFont());
+        if (label2Font != null) label2.setFont(label2Font);
+        label2.setText("Log In");
+        panel1.add(label2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel2 = new JPanel();
         panel2.setLayout(new BorderLayout(0, 10));
         panel2.setOpaque(false);
@@ -142,4 +143,5 @@ public class LogInForm {
     public JComponent $$$getRootComponent$$$() {
         return Main;
     }
+
 }

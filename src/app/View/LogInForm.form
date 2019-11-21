@@ -21,7 +21,7 @@
           <size top="0" left="0" bottom="0" right="0"/>
         </border>
         <children>
-          <component id="c1e0e" class="javax.swing.JLabel">
+          <component id="c1e0e" class="javax.swing.JLabel" binding="titleLabel">
             <constraints border-constraint="Center"/>
             <properties>
               <font name="Arial" size="28" style="1"/>

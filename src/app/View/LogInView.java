@@ -20,6 +20,8 @@ public class LogInView {
         return logInForm.Main;
     }
 
+    public JLabel getTitleLabel() { return logInForm.titleLabel; }
+
     //Properties
     private static LogInForm logInForm;
 }
