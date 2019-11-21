@@ -1,17 +1,22 @@
 package app.Controller;
 
+import app.View.LogInForm;
+import app.View.LogInView;
+
 public class LogInViewController extends ViewController {
 
-    public static void main(String[] args) {
+    private static LogInView view;
+
+    LogInViewController() {
+        LogInViewController.view = new LogInView();
         setupUI();
     }
 
     public static void setupUI(){
-        window.setTitle("Log In");
+        window.add(view.getLogInFormMainPanel());
         window.setVisible(true);
     }
 
-    //Properties
 
 
 }
