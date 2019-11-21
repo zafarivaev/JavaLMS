@@ -3,9 +3,6 @@ package app.Controller;
 import app.Util.Helper;
 import app.View.WelcomeView;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 public class WelcomeViewController extends ViewController {
 
     private static WelcomeView view;
@@ -19,15 +16,31 @@ public class WelcomeViewController extends ViewController {
         window.setTitle("Library Management System");
         window.add(view.getMainPanel());
 
-        view.getAdminButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Helper.shared.print("Admin clicked");
-                LogInViewController logInVC = new LogInViewController();
-                window.getContentPane().removeAll();
-                window.dispose();
-                logInVC.setupUI();
-            }
+        view.getAdminButton().addActionListener(actionEvent -> {
+            Helper.shared.print("Admin clicked");
+            LogInViewController logInVC = new LogInViewController();
+            window.getContentPane().removeAll();
+            window.dispose();
+            logInVC.userRole = "Admin";
+            logInVC.setupUI();
+        });
+
+        view.getLibrarianButton().addActionListener(actionEvent -> {
+            Helper.shared.print("Librarian clicked");
+            LogInViewController logInVC = new LogInViewController();
+            window.getContentPane().removeAll();
+            window.dispose();
+            logInVC.userRole = "Librarian";
+            logInVC.setupUI();
+        });
+
+        view.getStudentButton().addActionListener(actionEvent -> {
+            Helper.shared.print("Student clicked");
+            LogInViewController logInVC = new LogInViewController();
+            window.getContentPane().removeAll();
+            window.dispose();
+            logInVC.userRole = "Student";
+            logInVC.setupUI();
         });
 
         window.setVisible(true);
