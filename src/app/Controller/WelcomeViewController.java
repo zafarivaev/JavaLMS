@@ -11,7 +11,7 @@ public class WelcomeViewController extends ViewController {
         WelcomeViewController.view = new WelcomeView();
         setupUI();
     }
-
+//Test
     private static void setupUI() {
         window.setTitle("Library Management System");
         window.add(view.getMainPanel());
