@@ -13,6 +13,7 @@ public class LogInForm {
     public JButton registerButton;
     public JPasswordField passwordField1;
     public JLabel titleLabel;
+    private JTextField textField1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("LogInForm");

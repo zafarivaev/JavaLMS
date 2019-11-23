@@ -103,7 +103,7 @@
                 <properties>
                   <background color="-2628377"/>
                   <columns value="0"/>
-                  <margin top="2" left="6" bottom="2" right="6"/>
+                  <margin top="3" left="8" bottom="3" right="8"/>
                   <minimumSize width="200" height="30"/>
                   <name value=""/>
                   <opaque value="true"/>
@@ -118,6 +118,10 @@
                   <background color="-2628377"/>
                   <opaque value="true"/>
                 </properties>
+              </component>
+              <component id="30c16" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                <constraints border-constraint="Center"/>
+                <properties/>
               </component>
             </children>
           </grid>

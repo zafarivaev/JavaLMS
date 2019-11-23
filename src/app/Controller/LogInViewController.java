@@ -5,9 +5,10 @@ import app.View.LogInView;
 class LogInViewController extends ViewController {
 
     private static LogInView view;
-    static String userRole;
+    private static String userRole;
 
-    LogInViewController() {
+    LogInViewController(String userRole) {
+        this.userRole = userRole;
         LogInViewController.view = new LogInView();
         setupUI();
     }
