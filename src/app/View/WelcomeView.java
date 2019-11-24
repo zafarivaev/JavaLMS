@@ -18,7 +18,7 @@ public class WelcomeView {
 
     public JButton getAdminButton() { return welcomeForm.adminButton; }
 
-    public JButton getLibrarianButton() { return welcomeForm.liblarianButton; }
+    public JButton getLibrarianButton() { return welcomeForm.librarianButton; }
 
     public JButton getStudentButton() {  return welcomeForm.studentButton; }
 

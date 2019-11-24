@@ -1,6 +1,7 @@
 package app.Controller;
 
 import app.Util.Helper;
+import app.Util.UserRole;
 import app.View.WelcomeView;
 
 public class WelcomeViewController extends ViewController {
@@ -17,7 +18,7 @@ public class WelcomeViewController extends ViewController {
         window.add(view.getRootPanel());
         view.getAdminButton().addActionListener(actionEvent -> {
             Helper.shared.print("Admin clicked");
-            LogInViewController logInVC = new LogInViewController("Admin");
+            LogInViewController logInVC = new LogInViewController(UserRole.Admin);
             window.getContentPane().removeAll();
             window.dispose();
             logInVC.setupUI();
@@ -25,7 +26,7 @@ public class WelcomeViewController extends ViewController {
 
         view.getLibrarianButton().addActionListener(actionEvent -> {
             Helper.shared.print("Librarian clicked");
-            LogInViewController logInVC = new LogInViewController("Librarian");
+            LogInViewController logInVC = new LogInViewController(UserRole.Librarian);
             window.getContentPane().removeAll();
             window.dispose();
             logInVC.setupUI();
@@ -33,7 +34,7 @@ public class WelcomeViewController extends ViewController {
 
         view.getStudentButton().addActionListener(actionEvent -> {
             Helper.shared.print("Student clicked");
-            LogInViewController logInVC = new LogInViewController("Student");
+            LogInViewController logInVC = new LogInViewController(UserRole.Student);
             window.getContentPane().removeAll();
             window.dispose();
             logInVC.setupUI();
