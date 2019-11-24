@@ -18,26 +18,20 @@ public class WelcomeViewController extends ViewController {
         window.add(view.getRootPanel());
         view.getAdminButton().addActionListener(actionEvent -> {
             Helper.shared.print("Admin clicked");
-            LogInViewController logInVC = new LogInViewController(UserRole.Admin);
             window.getContentPane().removeAll();
-            window.dispose();
-            logInVC.setupUI();
+            new LogInViewController(UserRole.Admin);
         });
 
         view.getLibrarianButton().addActionListener(actionEvent -> {
             Helper.shared.print("Librarian clicked");
-            LogInViewController logInVC = new LogInViewController(UserRole.Librarian);
             window.getContentPane().removeAll();
-            window.dispose();
-            logInVC.setupUI();
+            new LogInViewController(UserRole.Librarian);
         });
 
         view.getStudentButton().addActionListener(actionEvent -> {
             Helper.shared.print("Student clicked");
-            LogInViewController logInVC = new LogInViewController(UserRole.Student);
             window.getContentPane().removeAll();
-            window.dispose();
-            logInVC.setupUI();
+            new LogInViewController(UserRole.Student);
         });
 
         window.setVisible(true);

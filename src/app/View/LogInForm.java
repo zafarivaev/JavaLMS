@@ -43,7 +43,7 @@ public class LogInForm {
         Font titleLabelFont = this.$$$getFont$$$("Arial", Font.PLAIN, 22, titleLabel.getFont());
         if (titleLabelFont != null) titleLabel.setFont(titleLabelFont);
         titleLabel.setForeground(new Color(-1));
-        titleLabel.setText("Admin");
+        titleLabel.setText("Title");
         TopTitlePanel.add(titleLabel);
         RegisterPanel = new JPanel();
         RegisterPanel.setLayout(new BorderLayout(0, 2));
