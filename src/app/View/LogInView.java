@@ -17,7 +17,7 @@ public class LogInView {
     }
 
     public JPanel getLogInFormMainPanel() {
-        return logInForm.Main;
+        return logInForm.Root;
     }
 
     public JLabel getTitleLabel() { return logInForm.titleLabel; }

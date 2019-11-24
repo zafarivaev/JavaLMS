@@ -3,8 +3,6 @@ package app.Controller;
 import app.Util.Helper;
 import app.View.WelcomeView;
 
-import javax.swing.*;
-
 public class WelcomeViewController extends ViewController {
 
     private static WelcomeView view;
@@ -13,10 +11,10 @@ public class WelcomeViewController extends ViewController {
         WelcomeViewController.view = new WelcomeView();
         setupUI();
     }
-//Test
+
     private static void setupUI() {
         window.setTitle("Library Management System");
-        window.add(view.getMainPanel());
+        window.add(view.getRootPanel());
         view.getAdminButton().addActionListener(actionEvent -> {
             Helper.shared.print("Admin clicked");
             LogInViewController logInVC = new LogInViewController("Admin");
