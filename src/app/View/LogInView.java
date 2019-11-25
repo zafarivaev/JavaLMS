@@ -14,5 +14,7 @@ public class LogInView {
 
     public JLabel getTitleLabel() { return logInForm.titleLabel; }
 
+    public JButton getRegistrationButton(){return  logInForm.registerButton;}
+
     private static LogInForm logInForm;
 }

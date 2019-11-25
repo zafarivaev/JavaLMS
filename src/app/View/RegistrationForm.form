@@ -6,6 +6,7 @@
     </constraints>
     <properties>
       <background color="-1"/>
+      <preferredSize width="1690" height="345"/>
     </properties>
     <border type="none"/>
     <children>
@@ -245,7 +246,7 @@
                   <text value="    Password "/>
                 </properties>
               </component>
-              <component id="42708" class="javax.swing.JPasswordField">
+              <component id="42708" class="javax.swing.JPasswordField" binding="passwordTextFieldCheck">
                 <constraints/>
                 <properties>
                   <background color="-1"/>
@@ -259,4 +260,11 @@
       </grid>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="genderRadioButtonGroup">
+      <member id="713bf"/>
+      <member id="713bf"/>
+      <member id="5eea7"/>
+    </group>
+  </buttonGroups>
 </form>
