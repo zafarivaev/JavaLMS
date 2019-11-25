@@ -16,6 +16,14 @@ public class RegistrationView {
 
     public JTextField getFullName(){return  registrationForm.fullNameTextField;}
 
+    public JTextField getId(){return  registrationForm.idTextField;}
+
+    public JPasswordField getPassword(){return  registrationForm.passwordTextField;}
+
+    public JPasswordField getPasswordCheck(){return  registrationForm.passwordTextFieldCheck;}
+
+    public  JTextField getMail(){return  registrationForm.mailTextField;}
+
     private static RegistrationForm registrationForm;
 
 }

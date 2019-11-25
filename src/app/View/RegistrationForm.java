@@ -45,6 +45,7 @@ public class RegistrationForm {
         Root = new JPanel();
         Root.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         Root.setBackground(new Color(-1));
+        Root.setPreferredSize(new Dimension(1690, 345));
         Title = new JPanel();
         Title.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 3, new Insets(0, 0, 0, 0), -1, -1));
         Title.setBackground(new Color(-14774810));
@@ -179,11 +180,11 @@ public class RegistrationForm {
         label1.setForeground(new Color(-12236470));
         label1.setText("    Password ");
         panel1.add(label1);
-        final JPasswordField passwordField1 = new JPasswordField();
-        passwordField1.setBackground(new Color(-1));
-        passwordField1.setForeground(new Color(-12236470));
-        passwordField1.setPreferredSize(new Dimension(300, 38));
-        panel1.add(passwordField1);
+        passwordTextFieldCheck = new JPasswordField();
+        passwordTextFieldCheck.setBackground(new Color(-1));
+        passwordTextFieldCheck.setForeground(new Color(-12236470));
+        passwordTextFieldCheck.setPreferredSize(new Dimension(300, 38));
+        panel1.add(passwordTextFieldCheck);
         ButtonGroup buttonGroup;
         buttonGroup = new ButtonGroup();
         buttonGroup.add(femaleRadioButton);

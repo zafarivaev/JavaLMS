@@ -1,8 +1,12 @@
 package app.Controller;
 
+import javax.swing.*;
+
 import app.Util.Helper;
 import app.Util.UserRole;
 import app.View.RegistrationView;
+
+import java.awt.*;
 
 public class RegistrationViewController extends ViewController {
 
@@ -25,8 +29,17 @@ public class RegistrationViewController extends ViewController {
         }
         view.getSaveButton().addActionListener(actionEvent -> {
             Helper.shared.print("Save button clicked");
-            window.getContentPane().removeAll();
-            new LogInViewController(userRole);
+            if(view.getFullName().getText().isEmpty()|| view.getId().getText().isEmpty()||
+                    view.getPassword().equals("")|| view.getPasswordCheck().equals("")||
+                    view.getMail().getText().isEmpty()){
+                JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+            else {
+                window.getContentPane().removeAll();
+                new LogInViewController(userRole);
+            }
         });
         view.getTitleLabel().setText(userRoleString);
         window.setVisible(true);
