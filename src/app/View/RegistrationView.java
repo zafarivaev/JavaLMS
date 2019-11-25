@@ -14,13 +14,15 @@ public class RegistrationView {
 
     public JButton getSaveButton(){return registrationForm.registerButton;}
 
-    public JTextField getId(){return  registrationForm.idTextField;}
+    public JTextField getNameField(){return  registrationForm.nameField;}
 
-    public JPasswordField getPassword(){return  registrationForm.passwordTextField;}
+    public JTextField getLastNameField(){return  registrationForm.lastNameField;}
 
-    public JPasswordField getPasswordCheck(){return  registrationForm.passwordTextFieldCheck;}
+    public JPasswordField getPassword(){return  registrationForm.passwordField;}
 
-    public  JTextField getMail(){return  registrationForm.mailTextField;}
+    public JPasswordField getConfirmPassword(){return  registrationForm.confirmPasswordField;}
+
+    public  JTextField getEMail(){return  registrationForm.emailField;}
 
     private static RegistrationForm registrationForm;
 
