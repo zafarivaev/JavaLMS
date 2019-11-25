@@ -10,11 +10,9 @@ public class RegistrationView {
 
     public JPanel getRegistrationRootPanel(){ return registrationForm.Root;}
 
-    public JLabel getTitleLabel(){ return  registrationForm.titleLabel;}
+    public JLabel getTitleLabel(){ return registrationForm.titleLabel;}
 
-    public JButton getSaveButton(){return  registrationForm.saveButton;}
-
-    public JTextField getFullName(){return  registrationForm.fullNameTextField;}
+    public JButton getSaveButton(){return registrationForm.registerButton;}
 
     private static RegistrationForm registrationForm;
 

@@ -1,5 +1,7 @@
 package app.View;
 
+
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -143,7 +145,4 @@ public class LogInForm {
         return Root;
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
