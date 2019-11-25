@@ -1,14 +1,13 @@
 package app.Controller;
 
-import app.Util.Helper;
 import app.View.MainWindow;
 
-public class ViewController extends MainWindow {
+class ViewController {
 
-    static MainWindow window = new MainWindow();
+    static MainWindow window = MainWindow.getMainWindow();
 
     ViewController() {
-        Helper.shared.print(window.toString());
+
     }
 
 }

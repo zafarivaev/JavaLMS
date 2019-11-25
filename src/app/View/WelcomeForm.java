@@ -107,5 +107,4 @@ public class WelcomeForm {
     public JComponent $$$getRootComponent$$$() {
         return Root;
     }
-
 }
