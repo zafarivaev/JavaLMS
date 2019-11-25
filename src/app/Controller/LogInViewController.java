@@ -10,12 +10,12 @@ class LogInViewController extends ViewController {
     private static UserRole userRole;
 
     LogInViewController(UserRole userRole) {
-        this.userRole = userRole;
+        LogInViewController.userRole = userRole;
         LogInViewController.view = new LogInView();
         setupUI();
     }
 
-    static void setupUI(){
+    private static void setupUI(){
         window.add(view.getLogInFormRootPanel());
         String userRoleString = "";
         switch (userRole) {
