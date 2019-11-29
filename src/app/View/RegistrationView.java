@@ -14,6 +14,16 @@ public class RegistrationView {
 
     public JButton getSaveButton(){return registrationForm.registerButton;}
 
+    public JTextField getNameField(){return  registrationForm.nameField;}
+
+    public JTextField getLastNameField(){return  registrationForm.lastNameField;}
+
+    public JPasswordField getPassword(){return  registrationForm.passwordField;}
+
+    public JPasswordField getConfirmPassword(){return  registrationForm.confirmPasswordField;}
+
+    public  JTextField getEMail(){return  registrationForm.emailField;}
+
     private static RegistrationForm registrationForm;
 
 }
