@@ -81,7 +81,7 @@ public class RegistrationForm {
         Font nameFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, nameField.getFont());
         if (nameFieldFont != null) nameField.setFont(nameFieldFont);
         nameField.setForeground(new Color(-16777216));
-        nameField.setMargin(new Insets(2, 6, 2, 6));
+        nameField.setMargin(new Insets(2, 5, 2, 5));
         nameField.setOpaque(false);
         CredentialsPanel.add(nameField, new com.intellij.uiDesigner.core.GridConstraints(0, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
         lastNameLabel = new JLabel();
@@ -118,7 +118,7 @@ public class RegistrationForm {
         Font lastNameFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, lastNameField.getFont());
         if (lastNameFieldFont != null) lastNameField.setFont(lastNameFieldFont);
         lastNameField.setForeground(new Color(-16777216));
-        lastNameField.setMargin(new Insets(2, 6, 2, 6));
+        lastNameField.setMargin(new Insets(2, 5, 2, 5));
         lastNameField.setOpaque(false);
         CredentialsPanel.add(lastNameField, new com.intellij.uiDesigner.core.GridConstraints(1, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
         final JPanel panel1 = new JPanel();
@@ -152,7 +152,7 @@ public class RegistrationForm {
         Font emailFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, emailField.getFont());
         if (emailFieldFont != null) emailField.setFont(emailFieldFont);
         emailField.setForeground(new Color(-16777216));
-        emailField.setMargin(new Insets(2, 6, 2, 6));
+        emailField.setMargin(new Insets(2, 5, 2, 5));
         emailField.setOpaque(false);
         CredentialsPanel.add(emailField, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
         passwordField = new JPasswordField();
