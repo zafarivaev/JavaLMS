@@ -30,6 +30,13 @@ class LogInViewController extends ViewController {
             window.getContentPane().removeAll();
             new RegistrationViewController(userRole);
         });
+        view.getLogInButton().addActionListener(actionEvent->{
+            Helper.shared.print("log in confirmed");
+            window.getContentPane().removeAll();
+            new StudentPanelsViewController(userRole);
+        });
+
+
         window.setVisible(true);
     }
 

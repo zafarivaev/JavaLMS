@@ -16,5 +16,7 @@ public class LogInView {
 
     public JButton getRegistrationButton(){return  logInForm.registerButton;}
 
+    public JButton getLogInButton(){return logInForm.logInButton;}
+
     private static LogInForm logInForm;
 }
