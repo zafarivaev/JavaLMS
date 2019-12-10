@@ -1,5 +1,6 @@
 package app.Controller;
 
+import app.Controller.Base.ViewController;
 import app.Util.Helper;
 import app.Util.UserRole;
 import app.View.RegistrationView;

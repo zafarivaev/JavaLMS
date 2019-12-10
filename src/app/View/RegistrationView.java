@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class RegistrationView {
 
-    public RegistrationView(){setupUI();}
+    public RegistrationView(){ setupUI(); }
 
     private void setupUI(){ registrationForm = new RegistrationForm();}
 

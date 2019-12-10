@@ -22,6 +22,8 @@
             <constraints/>
             <properties>
               <font name="Arial" size="22" style="0"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
               <text value="Admin"/>
             </properties>
           </component>

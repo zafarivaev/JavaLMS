@@ -1,5 +1,6 @@
 package app.Controller;
 
+import app.Controller.Base.ViewController;
 import app.Util.UserRole;
 import app.View.WelcomeView;
 
@@ -16,6 +17,7 @@ public class WelcomeViewController extends ViewController {
     private static void setupUI() {
         window.setTitle("Library Management System");
         window.add(view.getRootPanel());
+
         view.getAdminButton().addActionListener(actionEvent -> {
             window.getContentPane().removeAll();
             new LogInViewController(UserRole.Admin);

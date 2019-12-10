@@ -1,13 +1,11 @@
 package app.View;
 
-import app.Controller.WelcomeViewController;
+import app.View.Base.LMSForm;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
-public class StudentPanelsForm {
+public class StudentForm extends LMSForm {
     public JPanel Root;
     public JPanel TopTitlePanel;
     public JLabel titleLabel;
@@ -25,24 +23,9 @@ public class StudentPanelsForm {
     public JButton logOutButton;
     public JPanel LogOutPanel;
 
-
-    public StudentPanelsForm() {
-        logOutButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                setupInitialViewController();
-            }
-        });
-    }
-
-    private static void setupInitialViewController() {
-        new WelcomeViewController();
-    }
-
     public static void main(String[] args) {
-        JFrame frame = new JFrame("StudentPanelsForm");
-        frame.setContentPane(new StudentPanelsForm().Root);
+        JFrame frame = new JFrame("StudentForm");
+        frame.setContentPane(new StudentForm().Root);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -74,7 +57,10 @@ public class StudentPanelsForm {
         titleLabel = new JLabel();
         Font titleLabelFont = this.$$$getFont$$$("Arial", Font.PLAIN, 22, titleLabel.getFont());
         if (titleLabelFont != null) titleLabel.setFont(titleLabelFont);
-        titleLabel.setText("Student mode");
+        titleLabel.setForeground(new Color(-1));
+        titleLabel.setHorizontalAlignment(0);
+        titleLabel.setHorizontalTextPosition(0);
+        titleLabel.setText("Student");
         TopTitlePanel.add(titleLabel);
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
@@ -134,12 +120,12 @@ public class StudentPanelsForm {
         Main.addTab("Settings", panel10);
         tree1 = new JTree();
         panel10.add(tree1);
-        final JPanel panel11 = new JPanel();
-        panel11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        Root.add(panel11, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        LogOutPanel = new JPanel();
+        LogOutPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        Root.add(LogOutPanel, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         logOutButton = new JButton();
         logOutButton.setText("Log Out");
-        panel11.add(logOutButton);
+        LogOutPanel.add(logOutButton);
         ReserveButtonPanel = new JPanel();
         ReserveButtonPanel.setLayout(new CardLayout(0, 0));
         Root.add(ReserveButtonPanel, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
@@ -175,7 +161,4 @@ public class StudentPanelsForm {
         return Root;
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }

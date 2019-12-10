@@ -1,15 +1,11 @@
 package app.View;
 
-import app.Controller.WelcomeViewController;
+import app.View.Base.LMSForm;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
-public class AdminForm {
+public class AdminForm extends LMSForm {
     public JPanel Root;
     public JPanel TopTitleLabel;
     public JLabel titleLabel;
@@ -21,26 +17,6 @@ public class AdminForm {
     public JPanel MainPanel;
     public JPanel BooksSettings;
     public JPanel LibrariansSettings;
-    public JButton LogOutButton;
-
-    public AdminForm() {
-        logOutButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-        new WelcomeViewController();
-            }
-        });
-        logOutButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                setupInitialViewController();
-            }
-        });
-    }
-    private static void setupInitialViewController() {
-        new WelcomeViewController();
-    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("AdminForm");
