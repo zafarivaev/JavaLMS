@@ -19,9 +19,13 @@ class LogInViewController extends ViewController {
         window.add(view.getLogInFormRootPanel());
         String userRoleString = "";
         switch (userRole) {
-            case Admin: userRoleString = "Admin"; break;
+            case Admin: {userRoleString = "Admin";
+            new AdminViewController(userRole);
+            break;}
             case Librarian: userRoleString = "Librarian"; break;
-            case Student: userRoleString = "Student"; break;
+            case Student: {userRoleString = "Student";
+                new StudentPanelsViewController(userRole);
+                break;}
         }
         view.getTitleLabel().setText(userRoleString);
 
@@ -33,7 +37,7 @@ class LogInViewController extends ViewController {
         view.getLogInButton().addActionListener(actionEvent->{
             Helper.shared.print("log in confirmed");
             window.getContentPane().removeAll();
-            new StudentPanelsViewController(userRole);
+
         });
 
 

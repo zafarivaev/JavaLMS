@@ -11,9 +11,9 @@ class StudentPanelsViewController extends ViewController {
     private static StudentPanelsView view;
     private static UserRole userRole;
 
-    StudentPanelsViewController(UserRole userRole)
+    StudentPanelsViewController(UserRole student)
     {
-        StudentPanelsViewController.userRole=userRole;
+        StudentPanelsViewController.userRole=student;
         StudentPanelsViewController.view=new StudentPanelsView();
         setupUI();
     }

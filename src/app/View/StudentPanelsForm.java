@@ -1,17 +1,44 @@
 package app.View;
 
+import app.Controller.WelcomeViewController;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class StudentPanelsForm {
     public JPanel Root;
     public JPanel TopTitlePanel;
     public JLabel titleLabel;
-    public JTabbedPane tabbedPane1;
+    public JTabbedPane Main;
     public JTabbedPane tabbedPane2;
     public JTable MyBooksTable;
     public JPanel ReserveButtonPanel;
     public JButton reserveButton;
+    public JTable PublishDateTable;
+    public JTable BorrowedTable;
+    public JTable TitleTable;
+    public JTable SubjectTable;
+    public JTable ISBNTable;
+    public JTree tree1;
+    public JButton logOutButton;
+    public JPanel LogOutPanel;
+
+
+    public StudentPanelsForm() {
+        logOutButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                setupInitialViewController();
+            }
+        });
+    }
+
+    private static void setupInitialViewController() {
+        new WelcomeViewController();
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("StudentPanelsForm");
@@ -52,27 +79,27 @@ public class StudentPanelsForm {
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
         Root.add(panel1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        tabbedPane1 = new JTabbedPane();
-        Font tabbedPane1Font = this.$$$getFont$$$("Arial", Font.PLAIN, 18, tabbedPane1.getFont());
-        if (tabbedPane1Font != null) tabbedPane1.setFont(tabbedPane1Font);
-        panel1.add(tabbedPane1, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(200, 200), null, 0, false));
+        Main = new JTabbedPane();
+        Font MainFont = this.$$$getFont$$$("Arial", Font.PLAIN, 18, Main.getFont());
+        if (MainFont != null) Main.setFont(MainFont);
+        panel1.add(Main, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(200, 200), null, 0, false));
         final JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        tabbedPane1.addTab("My Books", panel2);
+        Main.addTab("My Books", panel2);
         MyBooksTable = new JTable();
-        MyBooksTable.setAutoResizeMode(1);
+        MyBooksTable.setAutoResizeMode(2);
         MyBooksTable.setEnabled(true);
         MyBooksTable.putClientProperty("JTable.autoStartsEdit", Boolean.FALSE);
         MyBooksTable.putClientProperty("Table.isFileList", Boolean.TRUE);
         panel2.add(MyBooksTable);
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        tabbedPane1.addTab("Current fine", panel3);
+        Main.addTab("Current fine", panel3);
         final JPanel panel4 = new JPanel();
         panel4.setLayout(new BorderLayout(0, 0));
         Font panel4Font = this.$$$getFont$$$("Arial", Font.PLAIN, 18, panel4.getFont());
         if (panel4Font != null) panel4.setFont(panel4Font);
-        tabbedPane1.addTab("All books", panel4);
+        Main.addTab("All books", panel4);
         tabbedPane2 = new JTabbedPane();
         Font tabbedPane2Font = this.$$$getFont$$$("Arial", Font.PLAIN, 18, tabbedPane2.getFont());
         if (tabbedPane2Font != null) tabbedPane2.setFont(tabbedPane2Font);
@@ -80,24 +107,39 @@ public class StudentPanelsForm {
         final JPanel panel5 = new JPanel();
         panel5.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("Publish date", panel5);
+        PublishDateTable = new JTable();
+        panel5.add(PublishDateTable);
         final JPanel panel6 = new JPanel();
         panel6.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("Borrowed", panel6);
+        BorrowedTable = new JTable();
+        panel6.add(BorrowedTable);
         final JPanel panel7 = new JPanel();
         panel7.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("Title", panel7);
+        TitleTable = new JTable();
+        panel7.add(TitleTable);
         final JPanel panel8 = new JPanel();
         panel8.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
         tabbedPane2.addTab("Subject", panel8);
+        SubjectTable = new JTable();
+        panel8.add(SubjectTable);
         final JPanel panel9 = new JPanel();
         panel9.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("ISBN", panel9);
+        ISBNTable = new JTable();
+        panel9.add(ISBNTable);
         final JPanel panel10 = new JPanel();
         panel10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        tabbedPane1.addTab("Settings", panel10);
+        Main.addTab("Settings", panel10);
+        tree1 = new JTree();
+        panel10.add(tree1);
         final JPanel panel11 = new JPanel();
         panel11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         Root.add(panel11, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        logOutButton = new JButton();
+        logOutButton.setText("Log Out");
+        panel11.add(logOutButton);
         ReserveButtonPanel = new JPanel();
         ReserveButtonPanel.setLayout(new CardLayout(0, 0));
         Root.add(ReserveButtonPanel, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));

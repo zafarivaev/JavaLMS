@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="app.View.AdminForm">
+  <grid id="27dc6" binding="Root" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="cd417" binding="TopTitleLabel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12620058"/>
+          <font name="Arial" size="18" style="0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="8789f" class="javax.swing.JLabel" binding="titleLabel">
+            <constraints/>
+            <properties>
+              <font name="Arial" size="22" style="0"/>
+              <text value="Admin"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="f8d3b" binding="LogOutPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="bd1dd" class="javax.swing.JButton" binding="logOutButton">
+            <constraints/>
+            <properties>
+              <text value="Log out"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="fa7a9" binding="MainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <tabbedpane id="606f3" binding="AdminSettings">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="9b9c7" binding="BooksSettings" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints>
+                  <tabbedpane title="Books"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <tabbedpane id="c7f1b" binding="tabbedPane2" default-binding="true">
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </tabbedpane>
+                </children>
+              </grid>
+              <grid id="91a47" binding="LibrariansSettings" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints>
+                  <tabbedpane title="Librarians"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <tabbedpane id="d8acb" binding="StudentsSettings">
+                <constraints>
+                  <tabbedpane title="Students"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </tabbedpane>
+            </children>
+          </tabbedpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
