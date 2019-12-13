@@ -42,27 +42,23 @@ public class AdminForm extends LMSForm {
      */
     private void $$$setupUI$$$() {
         Root = new JPanel();
-        Root.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
+        Root.setLayout(new BorderLayout(0, 0));
         TopTitleLabel = new JPanel();
         TopTitleLabel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         TopTitleLabel.setBackground(new Color(-12620058));
         Font TopTitleLabelFont = this.$$$getFont$$$("Arial", Font.PLAIN, 18, TopTitleLabel.getFont());
         if (TopTitleLabelFont != null) TopTitleLabel.setFont(TopTitleLabelFont);
-        Root.add(TopTitleLabel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        Root.add(TopTitleLabel, BorderLayout.NORTH);
         titleLabel = new JLabel();
         Font titleLabelFont = this.$$$getFont$$$("Arial", Font.PLAIN, 22, titleLabel.getFont());
         if (titleLabelFont != null) titleLabel.setFont(titleLabelFont);
+        titleLabel.setHorizontalAlignment(0);
+        titleLabel.setHorizontalTextPosition(0);
         titleLabel.setText("Admin");
         TopTitleLabel.add(titleLabel);
-        LogOutPanel = new JPanel();
-        LogOutPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        Root.add(LogOutPanel, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        logOutButton = new JButton();
-        logOutButton.setText("Log out");
-        LogOutPanel.add(logOutButton);
         MainPanel = new JPanel();
         MainPanel.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        Root.add(MainPanel, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        Root.add(MainPanel, BorderLayout.CENTER);
         AdminSettings = new JTabbedPane();
         MainPanel.add(AdminSettings, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(200, 200), null, 0, false));
         BooksSettings = new JPanel();
@@ -75,6 +71,12 @@ public class AdminForm extends LMSForm {
         AdminSettings.addTab("Librarians", LibrariansSettings);
         StudentsSettings = new JTabbedPane();
         AdminSettings.addTab("Students", StudentsSettings);
+        LogOutPanel = new JPanel();
+        LogOutPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        Root.add(LogOutPanel, BorderLayout.SOUTH);
+        logOutButton = new JButton();
+        logOutButton.setText("Log out");
+        LogOutPanel.add(logOutButton);
     }
 
     /**

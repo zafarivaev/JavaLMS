@@ -15,7 +15,7 @@ public class MainView {
     public void setupUI() {
         switch (userRole) {
             case Admin: form = new AdminForm(); break;
-            case Librarian: break;
+            case Librarian: form =new LibrarianForm(); break;
             case Student: form = new StudentForm(); break;
         }
     }
@@ -26,8 +26,8 @@ public class MainView {
                 AdminForm adminForm = (AdminForm) form;
                 return adminForm.Root;
             case Librarian:
-                //TO-DO: Should be implemented
-                return new JPanel();
+                LibrarianForm librarianForm=(LibrarianForm) form;
+                return librarianForm.Root;
             case Student:
                 StudentForm studentForm = (StudentForm) form;
                 return studentForm.Root;

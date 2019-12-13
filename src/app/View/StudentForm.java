@@ -11,15 +11,7 @@ public class StudentForm extends LMSForm {
     public JLabel titleLabel;
     public JTabbedPane Main;
     public JTabbedPane tabbedPane2;
-    public JTable MyBooksTable;
-    public JPanel ReserveButtonPanel;
     public JButton reserveButton;
-    public JTable PublishDateTable;
-    public JTable BorrowedTable;
-    public JTable TitleTable;
-    public JTable SubjectTable;
-    public JTable ISBNTable;
-    public JTree tree1;
     public JButton logOutButton;
     public JPanel LogOutPanel;
 
@@ -47,13 +39,13 @@ public class StudentForm extends LMSForm {
      */
     private void $$$setupUI$$$() {
         Root = new JPanel();
-        Root.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 1, new Insets(0, 0, 0, 0), -1, -1));
+        Root.setLayout(new BorderLayout(0, 0));
         TopTitlePanel = new JPanel();
-        TopTitlePanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 30));
+        TopTitlePanel.setLayout(new BorderLayout(0, 0));
         TopTitlePanel.setBackground(new Color(-12620058));
         Font TopTitlePanelFont = this.$$$getFont$$$("Arial", -1, 18, TopTitlePanel.getFont());
         if (TopTitlePanelFont != null) TopTitlePanel.setFont(TopTitlePanelFont);
-        Root.add(TopTitlePanel, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        Root.add(TopTitlePanel, BorderLayout.NORTH);
         titleLabel = new JLabel();
         Font titleLabelFont = this.$$$getFont$$$("Arial", Font.PLAIN, 22, titleLabel.getFont());
         if (titleLabelFont != null) titleLabel.setFont(titleLabelFont);
@@ -61,10 +53,10 @@ public class StudentForm extends LMSForm {
         titleLabel.setHorizontalAlignment(0);
         titleLabel.setHorizontalTextPosition(0);
         titleLabel.setText("Student");
-        TopTitlePanel.add(titleLabel);
+        TopTitlePanel.add(titleLabel, BorderLayout.CENTER);
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        Root.add(panel1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        Root.add(panel1, BorderLayout.CENTER);
         Main = new JTabbedPane();
         Font MainFont = this.$$$getFont$$$("Arial", Font.PLAIN, 18, Main.getFont());
         if (MainFont != null) Main.setFont(MainFont);
@@ -72,12 +64,6 @@ public class StudentForm extends LMSForm {
         final JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         Main.addTab("My Books", panel2);
-        MyBooksTable = new JTable();
-        MyBooksTable.setAutoResizeMode(2);
-        MyBooksTable.setEnabled(true);
-        MyBooksTable.putClientProperty("JTable.autoStartsEdit", Boolean.FALSE);
-        MyBooksTable.putClientProperty("Table.isFileList", Boolean.TRUE);
-        panel2.add(MyBooksTable);
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         Main.addTab("Current fine", panel3);
@@ -93,46 +79,31 @@ public class StudentForm extends LMSForm {
         final JPanel panel5 = new JPanel();
         panel5.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("Publish date", panel5);
-        PublishDateTable = new JTable();
-        panel5.add(PublishDateTable);
         final JPanel panel6 = new JPanel();
         panel6.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("Borrowed", panel6);
-        BorrowedTable = new JTable();
-        panel6.add(BorrowedTable);
         final JPanel panel7 = new JPanel();
         panel7.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("Title", panel7);
-        TitleTable = new JTable();
-        panel7.add(TitleTable);
         final JPanel panel8 = new JPanel();
         panel8.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
         tabbedPane2.addTab("Subject", panel8);
-        SubjectTable = new JTable();
-        panel8.add(SubjectTable);
         final JPanel panel9 = new JPanel();
         panel9.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         tabbedPane2.addTab("ISBN", panel9);
-        ISBNTable = new JTable();
-        panel9.add(ISBNTable);
         final JPanel panel10 = new JPanel();
         panel10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         Main.addTab("Settings", panel10);
-        tree1 = new JTree();
-        panel10.add(tree1);
         LogOutPanel = new JPanel();
         LogOutPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        Root.add(LogOutPanel, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        Root.add(LogOutPanel, BorderLayout.SOUTH);
+        reserveButton = new JButton();
+        reserveButton.setBackground(new Color(-12633025));
+        reserveButton.setText("Reserve");
+        LogOutPanel.add(reserveButton);
         logOutButton = new JButton();
         logOutButton.setText("Log Out");
         LogOutPanel.add(logOutButton);
-        ReserveButtonPanel = new JPanel();
-        ReserveButtonPanel.setLayout(new CardLayout(0, 0));
-        Root.add(ReserveButtonPanel, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        reserveButton = new JButton();
-        reserveButton.setBackground(new Color(-12620058));
-        reserveButton.setText("Reserve");
-        ReserveButtonPanel.add(reserveButton, "Card2");
     }
 
     /**
