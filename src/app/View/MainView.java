@@ -40,6 +40,5 @@ public class MainView {
     }
 
     private UserRole userRole;
-    private LMSForm form;
-
+    private static LMSForm form;
 }

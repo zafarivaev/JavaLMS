@@ -6,6 +6,7 @@ import app.Util.UserRole;
 import app.View.RegistrationView;
 
 import javax.swing.JOptionPane;
+import java.util.Arrays;
 
 class RegistrationViewController extends ViewController {
 
@@ -23,10 +24,14 @@ class RegistrationViewController extends ViewController {
         view.getSaveButton().addActionListener(actionEvent -> {
             Helper.shared.print("Register button clicked");
             if(view.getNameField().getText().isEmpty()||view.getLastNameField().getText().isEmpty()||
-            view.getEMail().getText().isEmpty()||view.getPasswordField().toString().isEmpty()||
-                    view.getConfirmPassword().toString().isEmpty())
+            view.getEMail().getText().isEmpty()||view.getPasswordField().getPassword().length == 0||
+                    view.getConfirmPassword().getPassword().length == 0)
             {
                 JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
+                        "Error",JOptionPane.ERROR_MESSAGE);
+            }
+            if(!Arrays.equals(view.getPasswordField().getPassword(),view.getConfirmPassword().getPassword())){
+                JOptionPane.showMessageDialog(null,"Your password should be the same",
                         "Error",JOptionPane.ERROR_MESSAGE);
             }
             else {
