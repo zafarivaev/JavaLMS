@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class LibrarianForm extends LMSForm {
+public class LibrarianForm implements LMSForm {
     public JPanel Root;
     public JPanel TopTitlePanel;
     public JLabel titleLabel;
@@ -31,6 +31,11 @@ public class LibrarianForm extends LMSForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    @Override
+    public JButton getLogOutButton() {
+        return logOutButton;
     }
 
     {
@@ -127,6 +132,7 @@ public class LibrarianForm extends LMSForm {
     public JComponent $$$getRootComponent$$$() {
         return Root;
     }
+
 
 
 }

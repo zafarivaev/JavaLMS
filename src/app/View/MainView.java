@@ -15,9 +15,13 @@ public class MainView {
     public void setupUI() {
         switch (userRole) {
             case Admin: form = new AdminForm(); break;
-            case Librarian: form =new LibrarianForm(); break;
+            case Librarian: form = new LibrarianForm(); break;
             case Student: form = new StudentForm(); break;
         }
+    }
+
+    public LMSForm getForm() {
+        return form;
     }
 
     public JPanel getRootPanel() {
@@ -26,7 +30,7 @@ public class MainView {
                 AdminForm adminForm = (AdminForm) form;
                 return adminForm.Root;
             case Librarian:
-                LibrarianForm librarianForm=(LibrarianForm) form;
+                LibrarianForm librarianForm = (LibrarianForm) form;
                 return librarianForm.Root;
             case Student:
                 StudentForm studentForm = (StudentForm) form;

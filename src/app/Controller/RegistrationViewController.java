@@ -4,6 +4,7 @@ import app.Controller.Base.ViewController;
 import app.Util.Helper;
 import app.Util.UserRole;
 import app.View.RegistrationView;
+
 import javax.swing.JOptionPane;
 
 class RegistrationViewController extends ViewController {
@@ -22,7 +23,7 @@ class RegistrationViewController extends ViewController {
         view.getSaveButton().addActionListener(actionEvent -> {
             Helper.shared.print("Register button clicked");
             if(view.getNameField().getText().isEmpty()||view.getLastNameField().getText().isEmpty()||
-            view.getEMail().getText().isEmpty()||view.getPassword().toString().isEmpty()||
+            view.getEMail().getText().isEmpty()||view.getPasswordField().toString().isEmpty()||
                     view.getConfirmPassword().toString().isEmpty())
             {
                 JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
@@ -33,6 +34,7 @@ class RegistrationViewController extends ViewController {
                 new LogInViewController(userRole);
             }
         });
+
         window.setVisible(true);
     }
 }

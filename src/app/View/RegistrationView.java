@@ -16,9 +16,9 @@ public class RegistrationView {
 
     public JTextField getNameField(){return  registrationForm.nameField;}
 
-    public JTextField getLastNameField(){return  registrationForm.lastNameField;}
+    public JTextField getLastNameField() {return  registrationForm.lastNameField;}
 
-    public JPasswordField getPassword(){return  registrationForm.passwordField;}
+    public JPasswordField getPasswordField() {return registrationForm.passwordField;}
 
     public JPasswordField getConfirmPassword(){return  registrationForm.confirmPasswordField;}
 

@@ -5,7 +5,7 @@ import app.View.Base.LMSForm;
 import javax.swing.*;
 import java.awt.*;
 
-public class AdminForm extends LMSForm {
+public class AdminForm implements LMSForm {
     public JPanel Root;
     public JPanel TopTitleLabel;
     public JLabel titleLabel;
@@ -24,6 +24,11 @@ public class AdminForm extends LMSForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    @Override
+    public JButton getLogOutButton() {
+        return logOutButton;
     }
 
     {
@@ -104,7 +109,6 @@ public class AdminForm extends LMSForm {
     public JComponent $$$getRootComponent$$$() {
         return Root;
     }
-
 }
 
 

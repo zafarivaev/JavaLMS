@@ -1,8 +1,13 @@
 package app.Controller;
 
 import app.Controller.Base.ViewController;
+import app.Util.Helper;
 import app.Util.UserRole;
 import app.View.MainView;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class MainViewController extends ViewController {
@@ -19,6 +24,14 @@ public class MainViewController extends ViewController {
 
     public static void setupUI() {
         window.add(view.getRootPanel());
+
+        view.getForm().getLogOutButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                Helper.shared.print("123213");
+            }
+        });
+
         window.setVisible(true);
     }
 }

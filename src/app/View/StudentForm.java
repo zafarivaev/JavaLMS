@@ -5,7 +5,7 @@ import app.View.Base.LMSForm;
 import javax.swing.*;
 import java.awt.*;
 
-public class StudentForm extends LMSForm {
+public class StudentForm implements LMSForm {
     public JPanel Root;
     public JPanel TopTitlePanel;
     public JLabel titleLabel;
@@ -21,6 +21,11 @@ public class StudentForm extends LMSForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    @Override
+    public JButton getLogOutButton() {
+        return logOutButton;
     }
 
     {
