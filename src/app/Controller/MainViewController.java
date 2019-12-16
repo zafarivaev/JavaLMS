@@ -28,7 +28,8 @@ public class MainViewController extends ViewController {
         view.getForm().getLogOutButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                Helper.shared.print("123213");
+                window.getContentPane().removeAll();
+                new LogInViewController(userRole);
             }
         });
 

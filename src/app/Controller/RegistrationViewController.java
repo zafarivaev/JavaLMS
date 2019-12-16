@@ -22,7 +22,6 @@ class RegistrationViewController extends ViewController {
     private static void setupUI(){
         window.add(view.getRegistrationRootPanel());
         view.getSaveButton().addActionListener(actionEvent -> {
-            Helper.shared.print("Register button clicked");
             if(view.getNameField().getText().isEmpty()||view.getLastNameField().getText().isEmpty()||
             view.getEMail().getText().isEmpty()||view.getPasswordField().getPassword().length == 0||
                     view.getConfirmPassword().getPassword().length == 0)
@@ -30,7 +29,7 @@ class RegistrationViewController extends ViewController {
                 JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
                         "Error",JOptionPane.ERROR_MESSAGE);
             }
-            if(!Arrays.equals(view.getPasswordField().getPassword(),view.getConfirmPassword().getPassword())){
+            else if(!Arrays.equals(view.getPasswordField().getPassword(),view.getConfirmPassword().getPassword())){
                 JOptionPane.showMessageDialog(null,"Your password should be the same",
                         "Error",JOptionPane.ERROR_MESSAGE);
             }
