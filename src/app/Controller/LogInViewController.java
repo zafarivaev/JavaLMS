@@ -29,15 +29,18 @@ class LogInViewController extends ViewController {
         view.getTitleLabel().setText(userRoleString);
 
         view.getRegistrationButton().addActionListener(actionEvent -> {
-            Helper.shared.print("Registration button pressed");
             window.getContentPane().removeAll();
             new RegistrationViewController(userRole);
         });
 
         view.getLogInButton().addActionListener(actionEvent->{
-            Helper.shared.print("Pressed log in");
             window.getContentPane().removeAll();
             new MainViewController(userRole);
+        });
+
+        view.getBackButton().addActionListener(actionEvent -> {
+            window.getContentPane().removeAll();
+            new WelcomeViewController();
         });
 
         window.setVisible(true);

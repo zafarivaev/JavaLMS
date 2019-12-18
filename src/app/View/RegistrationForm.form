@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="app.View.RegistrationForm">
-  <grid id="27dc6" binding="Root" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="Root" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="458"/>
+      <xy x="20" y="20" width="500" height="485"/>
     </constraints>
     <properties>
       <background color="-1"/>
@@ -13,7 +13,7 @@
     <children>
       <grid id="dc560" binding="TitlePanel" layout-manager="FlowLayout" hgap="5" vgap="30" flow-align="1">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12620058"/>
@@ -33,13 +33,13 @@
       </grid>
       <vspacer id="33753">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <grid id="e182a" binding="CredentialsPanel" layout-manager="GridLayoutManager" row-count="6" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <opaque value="false"/>
@@ -68,7 +68,7 @@
               <disabledTextColor color="-13619152"/>
               <font name="Arial" size="16" style="0"/>
               <foreground color="-16777216"/>
-              <margin top="2" left="5" bottom="2" right="5"/>
+              <margin top="3" left="8" bottom="3" right="8"/>
               <opaque value="false"/>
             </properties>
           </component>
@@ -127,7 +127,7 @@
               <disabledTextColor color="-13619152"/>
               <font name="Arial" size="16" style="0"/>
               <foreground color="-16777216"/>
-              <margin top="2" left="5" bottom="2" right="5"/>
+              <margin top="3" left="8" bottom="3" right="8"/>
               <opaque value="false"/>
             </properties>
           </component>
@@ -192,7 +192,7 @@
               <disabledTextColor color="-13619152"/>
               <font name="Arial" size="16" style="0"/>
               <foreground color="-16777216"/>
-              <margin top="2" left="5" bottom="2" right="5"/>
+              <margin top="3" left="8" bottom="3" right="8"/>
               <opaque value="false"/>
             </properties>
           </component>
@@ -245,7 +245,7 @@
       </grid>
       <component id="b87db" class="javax.swing.JButton" binding="registerButton" default-binding="true">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="100" height="40"/>
           </grid>
         </constraints>
@@ -259,9 +259,30 @@
       </component>
       <vspacer id="45735">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
+      <component id="befba" class="javax.swing.JButton" binding="backButton">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Arial" size="16" style="0"/>
+          <foreground color="-14774810"/>
+          <text value="Back"/>
+        </properties>
+      </component>
+      <hspacer id="9726f">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="7bddb">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
   <buttonGroups>

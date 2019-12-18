@@ -24,6 +24,8 @@ public class RegistrationView {
 
     public  JTextField getEMail(){return  registrationForm.emailField;}
 
+    public JButton getBackButton(){return registrationForm.backButton;}
+
     private static RegistrationForm registrationForm;
 
 }

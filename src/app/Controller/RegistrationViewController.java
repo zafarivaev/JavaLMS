@@ -39,6 +39,11 @@ class RegistrationViewController extends ViewController {
             }
         });
 
+        view.getBackButton().addActionListener(actionEvent -> {
+            window.getContentPane().removeAll();
+            new LogInViewController(userRole);
+        });
+
         window.setVisible(true);
     }
 }

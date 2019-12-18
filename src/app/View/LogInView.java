@@ -18,5 +18,7 @@ public class LogInView {
 
     public JButton getLogInButton(){return logInForm.logInButton;}
 
+    public JButton getBackButton(){return logInForm.backButton;}
+
     private static LogInForm logInForm;
 }
