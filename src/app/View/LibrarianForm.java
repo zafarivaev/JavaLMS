@@ -24,7 +24,6 @@ public class LibrarianForm implements LMSForm {
 
 
 
-
     public static void main(String[] args) {
         JFrame frame = new JFrame("LibrarianForm");
         frame.setContentPane(new LibrarianForm().Root);

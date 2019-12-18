@@ -156,35 +156,7 @@
                       <component id="235be" class="javax.swing.JList" binding="studentsList">
                         <constraints/>
                         <properties>
-                          <model>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                          </model>
+                          <model/>
                         </properties>
                       </component>
                     </children>
