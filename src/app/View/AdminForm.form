@@ -55,66 +55,37 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="5d6c1" class="javax.swing.JList" binding="booksList">
+                      <component id="9ba9d" class="javax.swing.JTable" binding="table1" default-binding="true">
                         <constraints/>
-                        <properties>
-                          <model>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                            <item value="Book One"/>
-                            <item value="Book Two"/>
-                            <item value="Book Three"/>
-                          </model>
-                        </properties>
+                        <properties/>
                       </component>
                     </children>
                   </scrollpane>
+                  <grid id="9b7fd" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="North"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="dee00" class="javax.swing.JButton" binding="button3" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <text value="Button"/>
+                        </properties>
+                      </component>
+                      <component id="78de" class="javax.swing.JButton" binding="button1" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <text value="Button"/>
+                        </properties>
+                      </component>
+                      <component id="721ba" class="javax.swing.JButton" binding="button2" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <text value="Button"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
                 </children>
               </grid>
               <grid id="91a47" binding="LibrariansSettings" layout-manager="BorderLayout" hgap="0" vgap="0">

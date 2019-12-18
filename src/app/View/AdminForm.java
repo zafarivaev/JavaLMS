@@ -15,10 +15,13 @@ public class AdminForm implements LMSForm {
     public JPanel MainPanel;
     public JPanel BooksSettings;
     public JPanel LibrariansSettings;
-    private JList booksList;
     private JList librariansList;
     private JPanel StudentsSettings;
     private JList studentsList;
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JTable table1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("AdminForm");
@@ -131,6 +134,18 @@ public class AdminForm implements LMSForm {
         defaultListModel1.addElement("Book Three");
         booksList.setModel(defaultListModel1);
         scrollPane1.setViewportView(booksList);
+        final JPanel panel1 = new JPanel();
+        panel1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        BooksSettings.add(panel1, BorderLayout.NORTH);
+        button3 = new JButton();
+        button3.setText("Button");
+        panel1.add(button3);
+        button1 = new JButton();
+        button1.setText("Button");
+        panel1.add(button1);
+        button2 = new JButton();
+        button2.setText("Button");
+        panel1.add(button2);
         LibrariansSettings = new JPanel();
         LibrariansSettings.setLayout(new BorderLayout(0, 0));
         AdminSettings.addTab("Librarians", LibrariansSettings);
