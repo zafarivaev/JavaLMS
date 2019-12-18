@@ -15,10 +15,10 @@ public class AdminForm implements LMSForm {
     public JPanel MainPanel;
     public JPanel BooksSettings;
     public JPanel LibrariansSettings;
-    private JList list1;
-    private JList list2;
+    private JList booksList;
+    private JList librariansList;
     private JPanel StudentsSettings;
-    private JList list3;
+    private JList studentsList;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("AdminForm");
@@ -76,7 +76,7 @@ public class AdminForm implements LMSForm {
         BooksSettings.setBorder(BorderFactory.createTitledBorder(""));
         final JScrollPane scrollPane1 = new JScrollPane();
         BooksSettings.add(scrollPane1, BorderLayout.CENTER);
-        list1 = new JList();
+        booksList = new JList();
         final DefaultListModel defaultListModel1 = new DefaultListModel();
         defaultListModel1.addElement("Book One");
         defaultListModel1.addElement("Book Two");
@@ -129,14 +129,14 @@ public class AdminForm implements LMSForm {
         defaultListModel1.addElement("Book One");
         defaultListModel1.addElement("Book Two");
         defaultListModel1.addElement("Book Three");
-        list1.setModel(defaultListModel1);
-        scrollPane1.setViewportView(list1);
+        booksList.setModel(defaultListModel1);
+        scrollPane1.setViewportView(booksList);
         LibrariansSettings = new JPanel();
         LibrariansSettings.setLayout(new BorderLayout(0, 0));
         AdminSettings.addTab("Librarians", LibrariansSettings);
         final JScrollPane scrollPane2 = new JScrollPane();
         LibrariansSettings.add(scrollPane2, BorderLayout.CENTER);
-        list2 = new JList();
+        librariansList = new JList();
         final DefaultListModel defaultListModel2 = new DefaultListModel();
         defaultListModel2.addElement("One Librarian");
         defaultListModel2.addElement("Two Librarian");
@@ -168,14 +168,14 @@ public class AdminForm implements LMSForm {
         defaultListModel2.addElement("One Librarian");
         defaultListModel2.addElement("Two Librarian");
         defaultListModel2.addElement("Three Librarian");
-        list2.setModel(defaultListModel2);
-        scrollPane2.setViewportView(list2);
+        librariansList.setModel(defaultListModel2);
+        scrollPane2.setViewportView(librariansList);
         StudentsSettings = new JPanel();
         StudentsSettings.setLayout(new BorderLayout(0, 0));
         AdminSettings.addTab("Students", StudentsSettings);
         final JScrollPane scrollPane3 = new JScrollPane();
         StudentsSettings.add(scrollPane3, BorderLayout.CENTER);
-        list3 = new JList();
+        studentsList = new JList();
         final DefaultListModel defaultListModel3 = new DefaultListModel();
         defaultListModel3.addElement("One Student");
         defaultListModel3.addElement("Two Student");
@@ -204,8 +204,8 @@ public class AdminForm implements LMSForm {
         defaultListModel3.addElement("One Student");
         defaultListModel3.addElement("Two Student");
         defaultListModel3.addElement("Three Student");
-        list3.setModel(defaultListModel3);
-        scrollPane3.setViewportView(list3);
+        studentsList.setModel(defaultListModel3);
+        scrollPane3.setViewportView(studentsList);
         LogOutPanel = new JPanel();
         LogOutPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         Root.add(LogOutPanel, BorderLayout.SOUTH);

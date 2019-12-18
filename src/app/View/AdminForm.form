@@ -55,7 +55,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="5d6c1" class="javax.swing.JList" binding="list1" default-binding="true">
+                      <component id="5d6c1" class="javax.swing.JList" binding="booksList">
                         <constraints/>
                         <properties>
                           <model>
@@ -129,7 +129,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="1c9b3" class="javax.swing.JList" binding="list2" default-binding="true">
+                      <component id="1c9b3" class="javax.swing.JList" binding="librariansList">
                         <constraints/>
                         <properties>
                           <model>
@@ -182,7 +182,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="235be" class="javax.swing.JList" binding="list3" default-binding="true">
+                      <component id="235be" class="javax.swing.JList" binding="studentsList">
                         <constraints/>
                         <properties>
                           <model>
