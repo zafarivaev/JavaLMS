@@ -12,6 +12,7 @@
         <properties>
           <background color="-12620058"/>
           <font name="Arial" size="18" style="0"/>
+          <preferredSize width="72" height="60"/>
         </properties>
         <border type="none"/>
         <children>
@@ -22,6 +23,7 @@
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="Admin"/>
+              <verticalAlignment value="0"/>
             </properties>
           </component>
         </children>
@@ -41,37 +43,183 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="9b9c7" binding="BooksSettings" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+              <grid id="9b9c7" binding="BooksSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <tabbedpane title="Books"/>
                 </constraints>
                 <properties/>
-                <border type="none"/>
+                <border type="none" title=""/>
                 <children>
-                  <tabbedpane id="c7f1b" binding="tabbedPane2" default-binding="true">
-                    <constraints/>
+                  <scrollpane id="9d93f">
+                    <constraints border-constraint="Center"/>
                     <properties/>
                     <border type="none"/>
-                    <children/>
-                  </tabbedpane>
+                    <children>
+                      <component id="5d6c1" class="javax.swing.JList" binding="list1" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <model>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                            <item value="Book One"/>
+                            <item value="Book Two"/>
+                            <item value="Book Three"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
                 </children>
               </grid>
-              <grid id="91a47" binding="LibrariansSettings" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+              <grid id="91a47" binding="LibrariansSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <tabbedpane title="Librarians"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <scrollpane id="aba8d">
+                    <constraints border-constraint="Center"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="1c9b3" class="javax.swing.JList" binding="list2" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <model>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                            <item value="One Librarian"/>
+                            <item value="Two Librarian"/>
+                            <item value="Three Librarian"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
               </grid>
-              <tabbedpane id="d8acb" binding="StudentsSettings">
+              <grid id="f3759" binding="StudentsSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <tabbedpane title="Students"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
-                <children/>
-              </tabbedpane>
+                <children>
+                  <scrollpane id="dddda">
+                    <constraints border-constraint="Center"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="235be" class="javax.swing.JList" binding="list3" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <model>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                            <item value="One Student"/>
+                            <item value="Two Student"/>
+                            <item value="Three Student"/>
+                          </model>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
             </children>
           </tabbedpane>
         </children>
