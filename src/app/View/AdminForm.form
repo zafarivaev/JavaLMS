@@ -2,207 +2,484 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="app.View.AdminForm">
   <grid id="27dc6" binding="Root" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="500" height="516"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="cd417" binding="TopTitleLabel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-        <constraints border-constraint="North"/>
-        <properties>
-          <background color="-12620058"/>
-          <font name="Arial" size="18" style="0"/>
-          <preferredSize width="72" height="60"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="8789f" class="javax.swing.JLabel" binding="titleLabel">
-            <constraints/>
-            <properties>
-              <font name="Arial" size="22" style="0"/>
-              <horizontalAlignment value="0"/>
-              <horizontalTextPosition value="0"/>
-              <text value="Admin"/>
-              <verticalAlignment value="0"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
-      <grid id="fa7a9" binding="MainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="fa7a9" binding="MainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
-        <properties/>
+        <properties>
+          <background color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <tabbedpane id="606f3" binding="AdminSettings">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="18" style="0"/>
+              <foreground color="-12622362"/>
+            </properties>
             <border type="none"/>
             <children>
-              <grid id="9b9c7" binding="BooksSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
+              <grid id="91a47" binding="LibrariansSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
-                  <tabbedpane title="Books"/>
+                  <tabbedpane title="Librarians"/>
                 </constraints>
-                <properties/>
-                <border type="none" title=""/>
+                <properties>
+                  <background color="-1"/>
+                  <font name="Arial" size="20" style="0"/>
+                  <foreground color="-14774810"/>
+                </properties>
+                <border type="none"/>
                 <children>
-                  <scrollpane id="9d93f">
+                  <scrollpane id="aba8d" binding="LibrarianScrollPane">
                     <constraints border-constraint="Center"/>
-                    <properties/>
-                    <border type="none"/>
-                    <children>
-                      <component id="9ba9d" class="javax.swing.JTable" binding="table1" default-binding="true">
-                        <constraints/>
-                        <properties/>
-                      </component>
-                    </children>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="empty"/>
+                    <children/>
                   </scrollpane>
-                  <grid id="9b7fd" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                  <grid id="7e2e3" binding="LibrarianButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
                     <constraints border-constraint="North"/>
-                    <properties/>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
                     <border type="none"/>
                     <children>
-                      <component id="dee00" class="javax.swing.JButton" binding="button3" default-binding="true">
+                      <component id="a648b" class="javax.swing.JButton" binding="addLibrarianButton">
                         <constraints/>
                         <properties>
-                          <text value="Button"/>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Add"/>
                         </properties>
                       </component>
-                      <component id="78de" class="javax.swing.JButton" binding="button1" default-binding="true">
+                      <component id="c4428" class="javax.swing.JButton" binding="editLibrarianButton">
                         <constraints/>
                         <properties>
-                          <text value="Button"/>
+                          <background color="-1"/>
+                          <enabled value="true"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <hideActionText value="false"/>
+                          <text value="Edit"/>
                         </properties>
                       </component>
-                      <component id="721ba" class="javax.swing.JButton" binding="button2" default-binding="true">
+                      <component id="53187" class="javax.swing.JButton" binding="deleteLibrarianButton">
                         <constraints/>
                         <properties>
-                          <text value="Button"/>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Delete"/>
                         </properties>
                       </component>
                     </children>
                   </grid>
                 </children>
               </grid>
-              <grid id="91a47" binding="LibrariansSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
-                <constraints>
-                  <tabbedpane title="Librarians"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <scrollpane id="aba8d">
-                    <constraints border-constraint="Center"/>
-                    <properties/>
-                    <border type="none"/>
-                    <children>
-                      <component id="1c9b3" class="javax.swing.JList" binding="librariansList">
-                        <constraints/>
-                        <properties>
-                          <model>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                            <item value="One Librarian"/>
-                            <item value="Two Librarian"/>
-                            <item value="Three Librarian"/>
-                          </model>
-                        </properties>
-                      </component>
-                    </children>
-                  </scrollpane>
-                </children>
-              </grid>
               <grid id="f3759" binding="StudentsSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <tabbedpane title="Students"/>
                 </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="10e78" binding="SutdentButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="North"/>
+                    <properties>
+                      <autoscrolls value="false"/>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="empty"/>
+                    <children>
+                      <component id="23bcc" class="javax.swing.JButton" binding="addStudentButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <enabled value="true"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Add"/>
+                        </properties>
+                      </component>
+                      <component id="e6722" class="javax.swing.JButton" binding="editStudentButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Edit"/>
+                        </properties>
+                      </component>
+                      <component id="8c204" class="javax.swing.JButton" binding="deleteStudentButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Delete"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <scrollpane id="b9f13" binding="StudentScrollPane">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-1"/>
+                      <foreground color="-12236470"/>
+                      <inheritsPopupMenu value="false"/>
+                    </properties>
+                    <border type="empty"/>
+                    <children/>
+                  </scrollpane>
+                </children>
+              </grid>
+              <grid id="e158d" binding="BookSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <tabbedpane title="Books"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                  <font name="Arial" size="18" style="0"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <tabbedpane id="6f7df" binding="BookPane">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-1"/>
+                      <font name="Arial" size="18" style="0"/>
+                      <foreground color="-12622362"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="147c0" binding="BookPublishDatePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                        <constraints>
+                          <tabbedpane title="Publish date"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="fb6af" binding="PublishDateScrollPane">
+                            <constraints border-constraint="Center"/>
+                            <properties/>
+                            <border type="none"/>
+                            <children/>
+                          </scrollpane>
+                        </children>
+                      </grid>
+                      <grid id="b462b" binding="BookTitlePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                        <constraints>
+                          <tabbedpane title="Title"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="2ac55" binding="TitleScrollPane">
+                            <constraints border-constraint="Center"/>
+                            <properties/>
+                            <border type="none"/>
+                            <children/>
+                          </scrollpane>
+                        </children>
+                      </grid>
+                      <grid id="5dd5" binding="BookSubjectPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                        <constraints>
+                          <tabbedpane title="Subject"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="32ac9" binding="SubjectScrollPane">
+                            <constraints border-constraint="Center"/>
+                            <properties/>
+                            <border type="none"/>
+                            <children/>
+                          </scrollpane>
+                        </children>
+                      </grid>
+                      <grid id="7a9e6" binding="BookISBNPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                        <constraints>
+                          <tabbedpane title="ISBN"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="28872" binding="ISBNScrollPane">
+                            <constraints border-constraint="Center"/>
+                            <properties/>
+                            <border type="none"/>
+                            <children/>
+                          </scrollpane>
+                        </children>
+                      </grid>
+                    </children>
+                  </tabbedpane>
+                </children>
+              </grid>
+              <grid id="86259" binding="ProfileSettings" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <tabbedpane title="Profile"/>
+                </constraints>
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <scrollpane id="dddda">
+                  <grid id="5c0b4" binding="ProfileButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints border-constraint="South"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="32a26" class="javax.swing.JButton" binding="editButton" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Edit"/>
+                        </properties>
+                      </component>
+                      <component id="ee230" class="javax.swing.JButton" binding="deleteButton" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Delete"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="c64ba" binding="ProfileInfoPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="Center"/>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="235be" class="javax.swing.JList" binding="studentsList">
-                        <constraints/>
+                      <grid id="503e" binding="CredentialsPanel" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="10">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
                         <properties>
-                          <model>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                            <item value="One Student"/>
-                            <item value="Two Student"/>
-                            <item value="Three Student"/>
-                          </model>
+                          <opaque value="false"/>
                         </properties>
-                      </component>
+                        <border type="none"/>
+                        <children>
+                          <component id="83221" class="javax.swing.JLabel" binding="firstNameLabel">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-12620058"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-12620058"/>
+                              <text value="First Name"/>
+                            </properties>
+                          </component>
+                          <component id="717ce" class="javax.swing.JTextField" binding="nameField">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="40"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <disabledTextColor color="-13619152"/>
+                              <enabled value="false"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-16777216"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <opaque value="true"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="8c43a" class="javax.swing.JLabel" binding="lastNameLabel">
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-12620058"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-12620058"/>
+                              <text value="Last Name"/>
+                            </properties>
+                          </component>
+                          <component id="6778f" class="javax.swing.JLabel" binding="genderLabel">
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-12620058"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-12620058"/>
+                              <text value="Gender"/>
+                            </properties>
+                          </component>
+                          <component id="b8009" class="javax.swing.JLabel" binding="emailLabel">
+                            <constraints>
+                              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-12620058"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-12620058"/>
+                              <text value="E-Mail"/>
+                            </properties>
+                          </component>
+                          <component id="db0ac" class="javax.swing.JLabel" binding="passwordLabel">
+                            <constraints>
+                              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-12620058"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-12620058"/>
+                              <text value="Password"/>
+                            </properties>
+                          </component>
+                          <hspacer id="8b3a9">
+                            <constraints>
+                              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <hspacer id="7736">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <hspacer id="4f25a">
+                            <constraints>
+                              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <component id="6f3dd" class="javax.swing.JTextField" binding="lastNameField">
+                            <constraints>
+                              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="40"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <disabledTextColor color="-13619152"/>
+                              <enabled value="false"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-16777216"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <opaque value="true"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="39d7e" class="javax.swing.JTextField" binding="genderField">
+                            <constraints>
+                              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="40"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <disabledTextColor color="-13619152"/>
+                              <enabled value="false"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-16777216"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <opaque value="true"/>
+                            </properties>
+                          </component>
+                          <component id="56a3" class="javax.swing.JTextField" binding="emailField">
+                            <constraints>
+                              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="40"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <disabledTextColor color="-13619152"/>
+                              <enabled value="false"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-16777216"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <opaque value="true"/>
+                            </properties>
+                          </component>
+                          <component id="20915" class="javax.swing.JTextField" binding="passwordField">
+                            <constraints>
+                              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="40"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <disabledTextColor color="-13619152"/>
+                              <enabled value="false"/>
+                              <font name="Arial" size="16" style="0"/>
+                              <foreground color="-16777216"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <opaque value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
                     </children>
-                  </scrollpane>
+                  </grid>
                 </children>
               </grid>
             </children>
           </tabbedpane>
+          <grid id="c8b5b" binding="TopTitlePanel" layout-manager="FlowLayout" hgap="5" vgap="30" flow-align="1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-12620058"/>
+              <enabled value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="2c49a" class="javax.swing.JLabel" binding="titleLabel">
+                <constraints/>
+                <properties>
+                  <font name="Arial" size="22" style="0"/>
+                  <foreground color="-1"/>
+                  <text value="Admin"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
       <grid id="f8d3b" binding="LogOutPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints border-constraint="South"/>
-        <properties/>
+        <properties>
+          <background color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="bd1dd" class="javax.swing.JButton" binding="logOutButton">
             <constraints/>
             <properties>
+              <background color="-1"/>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-12622362"/>
               <text value="Log out"/>
             </properties>
           </component>
