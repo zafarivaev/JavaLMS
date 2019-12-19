@@ -54,7 +54,6 @@ public class LibrarianForm implements LMSForm {
     private JTextField emailField;
     private JTextField passwordField;
 
-
     public static void main(String[] args) {
         JFrame frame = new JFrame("LibrarianForm");
         frame.setContentPane(new LibrarianForm().Root);
