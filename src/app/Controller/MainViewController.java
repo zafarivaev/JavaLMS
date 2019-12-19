@@ -2,7 +2,6 @@ package app.Controller;
 
 import app.Controller.Base.ViewController;
 import app.Model.Admin;
-import app.Model.Librarian;
 import app.Model.Student;
 import app.Util.Gender;
 import app.Util.Helper;
@@ -16,12 +15,10 @@ import javax.swing.event.ListDataListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class MainViewController extends ViewController {
+class MainViewController extends ViewController {
 
     private static MainView view;
     private static UserRole userRole;
@@ -45,10 +42,10 @@ public class MainViewController extends ViewController {
         });
 
         if (view.getForm().getClass().equals(AdminForm.class)) {
-            
+
             List<Student> studentModels = new ArrayList<>();
             studentModels.add(new Student(
-                    "Zafar", 
+                    "Zafar",
                     "Ivaev",
                     Gender.male,
                     "z.ivaev@mail.ru",
@@ -61,11 +58,10 @@ public class MainViewController extends ViewController {
                     "z.ivaev@mail.ru",
                     "123"));
 
+            DefaultListModel<String> listModel = new DefaultListModel<>();
 
-            AdminForm.shared.provideDataForStudentsList(studentModels.toArray());
+            listModel.add(0, "123123");
 
-            // Prints 2
-            System.out.println(AdminForm.shared.getStudentsList().getModel().getSize());
 
         } else if (view.getForm().getClass().equals(LibrarianForm.class)) {
 

@@ -103,6 +103,17 @@
                       </component>
                     </children>
                   </grid>
+                  <scrollpane id="bbdab">
+                    <constraints border-constraint="Center"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="858a1" class="javax.swing.JList" binding="list1" default-binding="true">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
                 </children>
               </grid>
               <grid id="bc5d8" binding="BookSettings" layout-manager="BorderLayout" hgap="0" vgap="0">

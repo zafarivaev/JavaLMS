@@ -53,6 +53,7 @@ public class LibrarianForm implements LMSForm {
     private JTextField genderField;
     private JTextField emailField;
     private JTextField passwordField;
+    private JList list1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("LibrarianForm");
@@ -148,6 +149,10 @@ public class LibrarianForm implements LMSForm {
         button3.setForeground(new Color(-12622362));
         button3.setText("Button");
         Student_BookButtonPanel.add(button3);
+        final JScrollPane scrollPane1 = new JScrollPane();
+        StudentSettings.add(scrollPane1, BorderLayout.CENTER);
+        list1 = new JList();
+        scrollPane1.setViewportView(list1);
         BookSettings = new JPanel();
         BookSettings.setLayout(new BorderLayout(0, 0));
         BookSettings.setBackground(new Color(-1));

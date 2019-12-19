@@ -46,7 +46,7 @@
                     </properties>
                     <border type="empty"/>
                     <children>
-                      <component id="45221" class="javax.swing.JList" binding="librariansList">
+                      <component id="714de" class="javax.swing.JList" binding="librariansList">
                         <constraints/>
                         <properties/>
                       </component>
@@ -148,7 +148,7 @@
                     </properties>
                     <border type="empty"/>
                     <children>
-                      <component id="c6448" class="javax.swing.JList" binding="studentsList">
+                      <component id="f96ab" class="javax.swing.JList" binding="studentsList">
                         <constraints/>
                         <properties/>
                       </component>
@@ -318,7 +318,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                               <text value=""/>
                             </properties>
@@ -394,7 +394,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                               <text value=""/>
                             </properties>
@@ -411,7 +411,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
@@ -427,7 +427,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
@@ -443,7 +443,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                             </properties>
                           </component>

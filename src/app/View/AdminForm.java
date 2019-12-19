@@ -54,14 +54,32 @@ public class AdminForm implements LMSForm {
     private JList librariansList;
     private JList studentsList;
 
+
     public static final AdminForm shared = new AdminForm();
 
-    public JList getStudentsList() {
-        return studentsList;
+//    public JList getStudentsList() {
+//        return studentsList;
+//    }
+//
+//    public void provideDataForStudentsList(Object[] students) {
+//        studentsList = new JList(students);
+//    }
+
+
+    public JButton getEditButton() {
+        return editButton;
     }
 
-    public void provideDataForStudentsList(Object[] students) {
-        studentsList = new JList(students);
+    public JScrollPane getLibrarianScrollPane() {
+        return LibrarianScrollPane;
+    }
+
+    public JScrollPane getStudentScrollPane() {
+        return StudentScrollPane;
+    }
+
+    public JButton getDeleteLibrarianButton() {
+        return deleteLibrarianButton;
     }
 
     public static void main(String[] args) {
@@ -261,7 +279,7 @@ public class AdminForm implements LMSForm {
         Font nameFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, nameField.getFont());
         if (nameFieldFont != null) nameField.setFont(nameFieldFont);
         nameField.setForeground(new Color(-16777216));
-        nameField.setMargin(new Insets(3, 8, 3, 8));
+        nameField.setMargin(new Insets(2, 6, 2, 6));
         nameField.setOpaque(true);
         nameField.setText("");
         CredentialsPanel.add(nameField, new com.intellij.uiDesigner.core.GridConstraints(0, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
@@ -306,7 +324,7 @@ public class AdminForm implements LMSForm {
         Font lastNameFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, lastNameField.getFont());
         if (lastNameFieldFont != null) lastNameField.setFont(lastNameFieldFont);
         lastNameField.setForeground(new Color(-16777216));
-        lastNameField.setMargin(new Insets(3, 8, 3, 8));
+        lastNameField.setMargin(new Insets(2, 6, 2, 6));
         lastNameField.setOpaque(true);
         lastNameField.setText("");
         CredentialsPanel.add(lastNameField, new com.intellij.uiDesigner.core.GridConstraints(1, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
@@ -317,7 +335,7 @@ public class AdminForm implements LMSForm {
         Font genderFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, genderField.getFont());
         if (genderFieldFont != null) genderField.setFont(genderFieldFont);
         genderField.setForeground(new Color(-16777216));
-        genderField.setMargin(new Insets(3, 8, 3, 8));
+        genderField.setMargin(new Insets(2, 6, 2, 6));
         genderField.setOpaque(true);
         CredentialsPanel.add(genderField, new com.intellij.uiDesigner.core.GridConstraints(2, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
         emailField = new JTextField();
@@ -327,7 +345,7 @@ public class AdminForm implements LMSForm {
         Font emailFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, emailField.getFont());
         if (emailFieldFont != null) emailField.setFont(emailFieldFont);
         emailField.setForeground(new Color(-16777216));
-        emailField.setMargin(new Insets(3, 8, 3, 8));
+        emailField.setMargin(new Insets(2, 6, 2, 6));
         emailField.setOpaque(true);
         CredentialsPanel.add(emailField, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
         passwordField = new JTextField();
@@ -337,7 +355,7 @@ public class AdminForm implements LMSForm {
         Font passwordFieldFont = this.$$$getFont$$$("Arial", Font.PLAIN, 16, passwordField.getFont());
         if (passwordFieldFont != null) passwordField.setFont(passwordFieldFont);
         passwordField.setForeground(new Color(-16777216));
-        passwordField.setMargin(new Insets(3, 8, 3, 8));
+        passwordField.setMargin(new Insets(2, 6, 2, 6));
         passwordField.setOpaque(true);
         CredentialsPanel.add(passwordField, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 40), null, 0, false));
         TopTitlePanel = new JPanel();
