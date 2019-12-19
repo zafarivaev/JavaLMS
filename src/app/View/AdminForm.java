@@ -51,6 +51,18 @@ public class AdminForm implements LMSForm {
     private JTextField genderField;
     private JTextField emailField;
     private JTextField passwordField;
+    private JList librariansList;
+    private JList studentsList;
+
+    public static final AdminForm shared = new AdminForm();
+
+    public JList getStudentsList() {
+        return studentsList;
+    }
+
+    public void provideDataForStudentsList(Object[] students) {
+        studentsList = new JList(students);
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("AdminForm");
@@ -103,6 +115,8 @@ public class AdminForm implements LMSForm {
         LibrarianScrollPane.setBackground(new Color(-1));
         LibrariansSettings.add(LibrarianScrollPane, BorderLayout.CENTER);
         LibrarianScrollPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null));
+        librariansList = new JList();
+        LibrarianScrollPane.setViewportView(librariansList);
         LibrarianButtonPanel = new JPanel();
         LibrarianButtonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         LibrarianButtonPanel.setBackground(new Color(-1));
@@ -168,6 +182,8 @@ public class AdminForm implements LMSForm {
         StudentScrollPane.setInheritsPopupMenu(false);
         StudentsSettings.add(StudentScrollPane, BorderLayout.CENTER);
         StudentScrollPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null));
+        studentsList = new JList();
+        StudentScrollPane.setViewportView(studentsList);
         BookSettings = new JPanel();
         BookSettings.setLayout(new BorderLayout(0, 0));
         BookSettings.setBackground(new Color(-1));
