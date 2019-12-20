@@ -2,12 +2,21 @@ package app.Controller;
 
 import app.Controller.Base.ViewController;
 import app.Model.Admin;
+import app.Model.Librarian;
+import app.Util.Gender;
+import app.Util.Helper;
 import app.Util.UserRole;
 import app.View.AdminView;
+
+import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 class AdminViewController extends ViewController{
 
     private static AdminView view;
+    private static DefaultTableModel librariansModel;
+
 
     AdminViewController() {
         AdminViewController.view = new AdminView();
@@ -21,14 +30,29 @@ class AdminViewController extends ViewController{
             window.getContentPane().removeAll();
             new LogInViewController(UserRole.Admin);
         });
-       /* ArrayList<String[5])> temp = new Vector<String>;
-        temp.add({"Alex","Frost","Male","frost@mail.ru","1fsdfgd"});
-        String[] columns = {"Name", "Last Name", "Gender","Email","Password"};
-        String[][] data = {{"one", "two", "three","four","five"}.};
-        DefaultTableModel model = new DefaultTableModel(data, columns);
-        JTable table = view.getLibrarianTable();
-        table.setModel(model);
-        window.setVisible(true);*/
+
+
+        librariansModel = new DefaultTableModel(new String[] {"First Name", "Last Name"}, 0);
+        view.getLibrarianTable().setModel(librariansModel);
+
+       view.getAddLibrarianButton().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent actionEvent) {
+               Helper.shared.print("Add in admin librarians");
+
+               // Mock librarian
+               Librarian mockLibrarian = new Librarian("Zafar",
+                       "Ivaev",
+                       Gender.male,
+                       "z.ivaev@mail.ru",
+                       "pass123");
+
+
+               librariansModel.addRow(new Object[]{
+                       mockLibrarian.firstName,
+                       mockLibrarian.lastName});
+           }
+       });
        window.setVisible(true);
     }
 

@@ -4,8 +4,8 @@ import app.Util.Gender;
 import app.Util.UserRole;
 
 public class User {
-    String firstName;
-    String lastName;
+    public String firstName;
+    public String lastName;
     Gender gender;
     String email;
     String password;
