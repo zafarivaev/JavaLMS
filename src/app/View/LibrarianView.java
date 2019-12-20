@@ -9,7 +9,7 @@ public class LibrarianView {
 
     private void setupUI() { librarianForm = new LibrarianForm(); }
 
-    public JPanel getAdminFormRootPanel() { return librarianForm.Root; }
+    public JPanel getLibrarianFormRootPanel() { return librarianForm.Root; }
 
     public JButton getLogOutButton(){return librarianForm.logOutButton;}
 

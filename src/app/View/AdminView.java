@@ -1,7 +1,6 @@
 package app.View;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class AdminView {
 
@@ -52,6 +51,11 @@ public class AdminView {
     public JList getStudentsList(){return  adminForm.studentsList;}
 
     public JTable getLibrarianTable(){return adminForm.librarianTable;}
+
+
+    // Scroll panes
+
+    public JScrollPane getLibrarianScrollPane(){return adminForm.LibrarianScrollPane;}
 
     private static AdminForm adminForm;
 }

@@ -37,7 +37,12 @@ class LogInViewController extends ViewController {
             window.getContentPane().removeAll();
             switch (userRole){
                 case Admin:
-                    new AdminViewController();
+                    new AdminViewController();break;
+                case Librarian:
+                    new LibrarianViewController();break;
+                case Student:
+                    new StudentViewController();break;
+                default:
             }
         });
 
