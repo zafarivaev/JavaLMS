@@ -46,7 +46,7 @@
                     </properties>
                     <border type="empty"/>
                     <children>
-                      <component id="714de" class="javax.swing.JList" binding="librariansList">
+                      <component id="925d7" class="javax.swing.JTable" binding="librarianTable">
                         <constraints/>
                         <properties/>
                       </component>
@@ -101,7 +101,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <grid id="10e78" binding="SutdentButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                  <grid id="10e78" binding="StudentButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
                     <constraints border-constraint="North"/>
                     <properties>
                       <autoscrolls value="false"/>
@@ -259,7 +259,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="32a26" class="javax.swing.JButton" binding="editButton" default-binding="true">
+                      <component id="32a26" class="javax.swing.JButton" binding="editProfileButton">
                         <constraints/>
                         <properties>
                           <background color="-1"/>
@@ -268,7 +268,7 @@
                           <text value="Edit"/>
                         </properties>
                       </component>
-                      <component id="ee230" class="javax.swing.JButton" binding="deleteButton" default-binding="true">
+                      <component id="ee230" class="javax.swing.JButton" binding="deleteProfileButton">
                         <constraints/>
                         <properties>
                           <background color="-1"/>
@@ -318,7 +318,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="2" left="6" bottom="2" right="6"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
                               <opaque value="true"/>
                               <text value=""/>
                             </properties>
@@ -394,7 +394,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="2" left="6" bottom="2" right="6"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
                               <opaque value="true"/>
                               <text value=""/>
                             </properties>
@@ -411,7 +411,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="2" left="6" bottom="2" right="6"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
@@ -427,7 +427,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="2" left="6" bottom="2" right="6"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
@@ -443,7 +443,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="2" left="6" bottom="2" right="6"/>
+                              <margin top="3" left="8" bottom="3" right="8"/>
                               <opaque value="true"/>
                             </properties>
                           </component>

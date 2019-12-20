@@ -35,7 +35,10 @@ class LogInViewController extends ViewController {
 
         view.getLogInButton().addActionListener(actionEvent->{
             window.getContentPane().removeAll();
-            new MainViewController(userRole);
+            switch (userRole){
+                case Admin:
+                    new AdminViewController();
+            }
         });
 
         view.getBackButton().addActionListener(actionEvent -> {
