@@ -42,7 +42,7 @@ public class DatabaseProvider {
         return dao;
     }
 
-    public static void createTableIfNotExists(ConnectionSource connectionSource, Class<app.Model.Account> dataClass) {
+    public static void createTableIfNotExists(ConnectionSource connectionSource, Class dataClass) {
         try {
             TableUtils.createTableIfNotExists(connectionSource, dataClass);
         } catch (SQLException e) {
