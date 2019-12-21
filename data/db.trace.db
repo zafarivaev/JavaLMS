@@ -1,0 +1,9 @@
+12-21 19:42:44 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNTS" already exists; SQL statement:
+CREATE TABLE `accounts` (`name` VARCHAR(255) , `password` VARCHAR(255) , PRIMARY KEY (`name`) )  [42101-166]
+12-21 19:43:09 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNTS" already exists; SQL statement:
+CREATE TABLE `accounts` (`name` VARCHAR(255) , `password` VARCHAR(255) , PRIMARY KEY (`name`) )  [42101-166]
+12-21 19:43:19 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNTS" already exists; SQL statement:
+CREATE TABLE `accounts` (`name` VARCHAR(255) , `password` VARCHAR(255) , PRIMARY KEY (`name`) )  [42101-166]
