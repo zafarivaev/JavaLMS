@@ -68,8 +68,6 @@ class RegistrationViewController extends ViewController {
                 // persist the account object to the database
                 DatabaseProvider.create(account);
 
-                // retrieve the account from the database by its id field (name)\
-
                 System.out.println("Account: " + DatabaseProvider.queryForAll());
 
 
