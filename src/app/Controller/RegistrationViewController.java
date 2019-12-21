@@ -18,6 +18,7 @@ import javax.swing.*;
 import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -63,15 +64,18 @@ class RegistrationViewController extends ViewController {
 
                 // create an instance of Account
                 Account account = new Account();
-                account.setName("Iskan");
+                account.setName("Alex");
 
                 // persist the account object to the database
                 DatabaseProvider.create(account);
 
                 System.out.println("Account: " + DatabaseProvider.queryForAll());
-
-
-                DatabaseProvider.closeDatabase();
+                ArrayList<Account> accountArrayList = new ArrayList<>();
+                accountArrayList = (ArrayList<Account>) DatabaseProvider.queryForAll();
+                for(Account obj:accountArrayList){
+                    System.out.print(obj.getName());
+                    System.out.println(obj.getPassword());
+                }
 
 //                window.getContentPane().removeAll();
 //                new LogInViewController(userRole);
