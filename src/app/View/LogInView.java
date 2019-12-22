@@ -20,5 +20,9 @@ public class LogInView {
 
     public JButton getBackButton(){return logInForm.backButton;}
 
+    public JTextField getEmailField() { return logInForm.emailField; }
+
+    public JPasswordField getPasswordField() { return logInForm.passwordField; }
+
     private static LogInForm logInForm;
 }

@@ -22,7 +22,7 @@ public class RegistrationView {
 
     public JPasswordField getConfirmPassword(){return  registrationForm.confirmPasswordField;}
 
-    public  JTextField getEMail(){return  registrationForm.emailField;}
+    public  JTextField getEMailField(){return  registrationForm.emailField;}
 
     public JButton getBackButton(){return registrationForm.backButton;}
 

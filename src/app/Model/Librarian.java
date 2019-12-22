@@ -6,10 +6,29 @@ import app.Util.UserRole;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import java.util.Date;
 
-@DatabaseTable(tableName = "librarian")
-public class Librarian extends User {
+@DatabaseTable(tableName = "librarians")
+public class Librarian extends Object {
+
+    @DatabaseField
+    public
+    String firstName;
+
+    @DatabaseField
+    public
+    String lastName;
+
+    @DatabaseField
+    public
+    Gender gender;
+
+    @DatabaseField(id = true)
+    public
+    String email;
+
+    @DatabaseField
+    public
+    String password;
 
     public Librarian(){
 
@@ -20,7 +39,11 @@ public class Librarian extends User {
                  Gender gender,
                  String email,
                  String password) {
-        super(firstName, lastName, gender, email, password, UserRole.Librarian);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.email = email;
+        this.password = password;
     }
 }
 

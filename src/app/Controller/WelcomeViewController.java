@@ -1,6 +1,8 @@
 package app.Controller;
 
 import app.Controller.Base.ViewController;
+import app.Model.Admin;
+import app.Util.DatabaseProvider;
 import app.Util.UserRole;
 import app.View.WelcomeView;
 
@@ -12,6 +14,11 @@ public class WelcomeViewController extends ViewController {
         super();
         WelcomeViewController.view = new WelcomeView();
         setupUI();
+
+        // TEST: SHOW ALL DATABASE OBJECTS
+
+        //print all admins
+        DatabaseProvider.getAll(Admin.class);
     }
 
     private static void setupUI() {
