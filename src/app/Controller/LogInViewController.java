@@ -9,6 +9,9 @@ import app.Util.UserRole;
 import app.View.LogInView;
 import app.Util.Helper;
 
+import javax.swing.*;
+import java.util.Arrays;
+
 class LogInViewController extends ViewController {
 
     private static LogInView view;
@@ -48,7 +51,9 @@ class LogInViewController extends ViewController {
                         window.getContentPane().removeAll();
                         new AdminViewController();
                     } else {
-                        //TO-DO: Show error
+                            JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
+                                    "Error",JOptionPane.ERROR_MESSAGE);
+
                         System.out.println("input password: " + inputPassword +
                                  " \nactual user's password: " + admin.password);
                     }
@@ -62,7 +67,10 @@ class LogInViewController extends ViewController {
                         window.getContentPane().removeAll();
                         new LibrarianViewController();
                     } else {
-                        //TO-DO: Show error
+                        JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
+                                "Error",JOptionPane.ERROR_MESSAGE);
+                        System.out.println("input password: " + inputPassword +
+                                " \nactual user's password: " + librarian.password);
                     }
                     break;
                 case Student:
@@ -74,7 +82,10 @@ class LogInViewController extends ViewController {
                         window.getContentPane().removeAll();
                         new StudentViewController();
                     } else {
-                        //TO-DO: Show error
+                        JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
+                                "Error",JOptionPane.ERROR_MESSAGE);
+                        System.out.println("input password: " + inputPassword +
+                                " \nactual user's password: " + student.password);
                     }
                     break;
                 default:
