@@ -1,3 +1,12 @@
-12-22 21:56:17 jdbc[2]: exception
+12-22 23:04:44 jdbc[2]: exception
 org.h2.jdbc.JdbcSQLException: Table "ADMINS" not found; SQL statement:
 SELECT * FROM `admins`  [42102-166]
+12-22 23:05:38 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADMINS" not found; SQL statement:
+SELECT * FROM `admins`  [42102-166]
+12-22 23:05:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ADMINS" not found; SQL statement:
+SELECT * FROM `admins` WHERE `email` = ? [42102-166]
+12-22 23:06:13 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "LIBRARIANS" not found; SQL statement:
+SELECT * FROM `librarians`  [42102-166]

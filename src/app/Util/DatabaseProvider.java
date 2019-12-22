@@ -1,5 +1,8 @@
 package app.Util;
 
+import app.Model.Admin;
+import app.Model.Librarian;
+import app.Model.Student;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
@@ -13,7 +16,6 @@ import java.util.List;
 public class DatabaseProvider {
 
     // Properties
-    private static Dao dao = null;
     private static String databaseURL = "jdbc:h2:./database/db";
 
     // Provide Connection Source for Database
@@ -37,13 +39,44 @@ public class DatabaseProvider {
     }
 
     // Provide dao to work with ORMLite
-    private static Dao provideDao(Class dataClass) {
+//    private static Dao provideDao(Class dataClass) {
+//        try {
+//            dao = DaoManager.createDao( connectionSource(), dataClass);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return dao;
+//    }
+
+    // Dao providers
+    public static Dao<Admin, ?> provideAdminDao() {
         try {
-            dao = DaoManager.createDao( connectionSource(), dataClass);
+            return DaoManager.createDao(connectionSource(), Admin.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return dao;
+
+        return null;
+    }
+
+    public static Dao<Librarian, ?> provideLibrarianDao() {
+        try {
+            return DaoManager.createDao(connectionSource(), Librarian.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public static Dao<Student, ?> provideStudentDao() {
+        try {
+            return DaoManager.createDao(connectionSource(), Student.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     // Create table if doesn't already exist
@@ -56,9 +89,9 @@ public class DatabaseProvider {
     }
 
     // CREATE
-    public static void add(Object object) {
+    public static void add(Object object, Dao dao) {
         createTableIfNotExists(connectionSource(), object.getClass());
-        dao = provideDao(object.getClass());
+
         try {
             dao.create(object);
         } catch (SQLException e) {
@@ -67,7 +100,8 @@ public class DatabaseProvider {
     }
 
     // READ
-    public static Object get(String id) {
+    public static Object get(String id, Dao dao) {
+
         try {
             return dao.queryForId(id);
         } catch (SQLException e) {
@@ -76,19 +110,20 @@ public class DatabaseProvider {
         return null;
     }
 
-    public static List<Object> getAll(Class dataClass) {
-        dao = provideDao(dataClass);
+    public static List<Object> getAll(Class dataClass, Dao dao) {
+        createTableIfNotExists(connectionSource(), dataClass);
         try {
             return dao.queryForAll();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return null;
     }
 
     // UPDATE
-    public static void update(Object object) {
-        dao = provideDao(object.getClass());
+    public static void update(Object object, Dao dao) {
+
         try {
             dao.update(object);
         } catch (SQLException e) {
@@ -97,7 +132,7 @@ public class DatabaseProvider {
     }
 
     // DELETE
-    public static void delete(Object object) {
+    public static void delete(Object object, Dao dao) {
         try {
             dao.delete(object);
         } catch (SQLException e) {
@@ -106,8 +141,7 @@ public class DatabaseProvider {
     }
 
     // Log in
-    public static Object retrieveUser(Class dataClass, String email) {
-        dao = provideDao(dataClass);
+    public static Object retrieveUser(Class dataClass, String email, Dao dao) {
         try {
             return dao.queryForId(email);
         } catch (SQLException e) {

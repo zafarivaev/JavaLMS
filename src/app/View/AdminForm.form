@@ -46,7 +46,7 @@
                     </properties>
                     <border type="empty"/>
                     <children>
-                      <component id="925d7" class="javax.swing.JTable" binding="librarianTable">
+                      <component id="925d7" class="javax.swing.JTable" binding="librariansTable">
                         <constraints/>
                         <properties/>
                       </component>
@@ -148,7 +148,7 @@
                     </properties>
                     <border type="empty"/>
                     <children>
-                      <component id="f96ab" class="javax.swing.JList" binding="studentsList">
+                      <component id="20ce2" class="javax.swing.JTable" binding="studentsTable">
                         <constraints/>
                         <properties/>
                       </component>

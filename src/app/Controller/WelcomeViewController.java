@@ -5,6 +5,9 @@ import app.Model.Admin;
 import app.Util.DatabaseProvider;
 import app.Util.UserRole;
 import app.View.WelcomeView;
+import org.h2.engine.Database;
+
+import javax.xml.crypto.Data;
 
 public class WelcomeViewController extends ViewController {
 
@@ -18,7 +21,7 @@ public class WelcomeViewController extends ViewController {
         // TEST: SHOW ALL DATABASE OBJECTS
 
         //print all admins
-        DatabaseProvider.getAll(Admin.class);
+        DatabaseProvider.getAll(Admin.class, DatabaseProvider.provideAdminDao());
     }
 
     private static void setupUI() {

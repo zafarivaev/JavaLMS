@@ -40,7 +40,9 @@ class LogInViewController extends ViewController {
 
             switch (userRole){
                 case Admin:
-                    Admin admin = (Admin) DatabaseProvider.retrieveUser(Admin.class, inputEmail);
+                    Admin admin = (Admin) DatabaseProvider.retrieveUser(Admin.class,
+                            inputEmail,
+                            DatabaseProvider.provideAdminDao());
 
                     assert admin != null;
 
@@ -54,7 +56,11 @@ class LogInViewController extends ViewController {
                     }
                     break;
                 case Librarian:
-                    Librarian librarian = (Librarian) DatabaseProvider.retrieveUser(Librarian.class, inputEmail);
+                    Librarian librarian =
+                            (Librarian) DatabaseProvider
+                                    .retrieveUser(Librarian.class,
+                                            inputEmail,
+                                            DatabaseProvider.provideLibrarianDao());
 
                     assert librarian != null;
 
@@ -66,7 +72,11 @@ class LogInViewController extends ViewController {
                     }
                     break;
                 case Student:
-                    Student student = (Student) DatabaseProvider.retrieveUser(Student.class, inputEmail);
+                    Student student =
+                            (Student) DatabaseProvider
+                                    .retrieveUser(Student.class,
+                                            inputEmail,
+                                            DatabaseProvider.provideStudentDao());
 
                     assert student != null;
 

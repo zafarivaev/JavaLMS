@@ -8,8 +8,10 @@ import app.Util.DatabaseProvider;
 import app.Util.Gender;
 import app.Util.UserRole;
 import app.View.RegistrationView;
+import org.h2.engine.Database;
 
 import javax.swing.*;
+import javax.xml.crypto.Data;
 import java.util.Arrays;
 
 
@@ -63,32 +65,33 @@ class RegistrationViewController extends ViewController {
                                 lastName,
                                 gender,
                                 email,
-                                password));
+                                password), DatabaseProvider.provideAdminDao());
 
                         window.getContentPane().removeAll();
                         new AdminViewController();
-
+                        break;
                     case Librarian:
                         DatabaseProvider.add(new Librarian(
                                 firstName,
                                 lastName,
                                 gender,
                                 email,
-                                password));
+                                password), DatabaseProvider.provideLibrarianDao());
 
                         window.getContentPane().removeAll();
                         new LibrarianViewController();
-
+                        break;
                     case Student:
                         DatabaseProvider.add(new Student(
                                 firstName,
                                 lastName,
                                 gender,
                                 email,
-                                password));
+                                password), DatabaseProvider.provideStudentDao());
 
                         window.getContentPane().removeAll();
                         new StudentViewController();
+                        break;
                 }
 
             }

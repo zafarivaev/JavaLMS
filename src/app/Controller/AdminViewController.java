@@ -36,7 +36,6 @@ class AdminViewController extends ViewController{
         });
 
 
-
         showLibrarians();
         showStudents();
 
@@ -65,38 +64,42 @@ class AdminViewController extends ViewController{
     private static void showLibrarians() {
         librariansModel = new DefaultTableModel(new String[] {"First Name", "Last Name", "Email"}, 0);
 
-        List<Object> librarians = DatabaseProvider.getAll(Librarian.class);
+        List<Object> librarians =
+                DatabaseProvider.getAll(Librarian.class, DatabaseProvider.provideLibrarianDao());
 
         assert librarians != null;
         for (Object o : librarians) {
             Librarian librarian = (Librarian) o;
+            System.out.println("librarian: " + librarian.firstName);
             librariansModel.addRow(new Object[]{
                     librarian.firstName,
                     librarian.lastName,
                     librarian.email
             });
         }
-
-        view.getLibrarianTable().setModel(librariansModel);
+        System.out.println("model: " + librariansModel.getRowCount());
+        view.getLibrariansTable().setModel(librariansModel);
     }
 
     // SHOW STUDENTS IN THE LIST
     private static void showStudents() {
         studentsModel = new DefaultTableModel(new String[] {"First Name", "Last Name", "Email"}, 0);
 
-        List<Object> students = DatabaseProvider.getAll(Student.class);
+        List<Object> students =
+                DatabaseProvider.getAll(Student.class, DatabaseProvider.provideStudentDao());
 
         assert students != null;
         for (Object o : students) {
             Student student = (Student) o;
-            librariansModel.addRow(new Object[]{
+            System.out.println("Student: " + student.firstName);
+            studentsModel.addRow(new Object[]{
                     student.firstName,
                     student.lastName,
                     student.email
             });
         }
 
-        view.getLibrarianTable().setModel(studentsModel);
+        view.getStudentsTable().setModel(studentsModel);
     }
 
 }

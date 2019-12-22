@@ -44,13 +44,11 @@ public class AdminView {
 
     public JButton getDeleteProfileButton(){return  adminForm.deleteProfileButton;}
 
-    // Lists
+    // Tables
 
-    public JList getLibrarianList(){return adminForm.librariansList;}
+    public JTable getLibrariansTable(){return adminForm.librariansTable;}
 
-    public JList getStudentsList(){return  adminForm.studentsList;}
-
-    public JTable getLibrarianTable(){return adminForm.librarianTable;}
+    public JTable getStudentsTable() { return adminForm.studentsTable;}
 
 
     // Scroll panes
