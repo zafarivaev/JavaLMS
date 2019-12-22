@@ -14,17 +14,9 @@ public class AdminView {
 
     // Librarian getters
 
-    public JButton getAddLibrarianButton(){return adminForm.addLibrarianButton;}
-
-    public JButton getEditLibrarianButton(){return  adminForm.editLibrarianButton;}
-
     public JButton getDeleteLibrarianButton(){return adminForm.deleteLibrarianButton;}
 
     // Student getters
-
-    public JButton getAddStudentButton(){return  adminForm.addStudentButton;}
-
-    public JButton getEditStudentButton(){return adminForm.editStudentButton;}
 
     public JButton getDeleteStudentButton(){return adminForm.deleteStudentButton;}
 
@@ -56,6 +48,8 @@ public class AdminView {
     // Scroll panes
 
     public JScrollPane getLibrarianScrollPane(){return adminForm.LibrarianScrollPane;}
+
+    public JPanel getRegistrationPanel(){return adminForm.CredentialsPanel;}
 
     private static AdminForm adminForm;
 }

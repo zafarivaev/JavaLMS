@@ -7,8 +7,12 @@ import app.Util.Gender;
 import app.Util.Helper;
 import app.Util.UserRole;
 import app.View.AdminView;
+import app.View.Base.MainWindow;
 
+
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -38,19 +42,13 @@ class AdminViewController extends ViewController{
        view.getAddLibrarianButton().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent actionEvent) {
-               Helper.shared.print("Add in admin librarians");
-
-               // Mock librarian
-               Librarian mockLibrarian = new Librarian("Zafar",
-                       "Ivaev",
-                       Gender.male,
-                       "z.ivaev@mail.ru",
-                       "pass123");
-
-
-               librariansModel.addRow(new Object[]{
-                       mockLibrarian.firstName,
-                       mockLibrarian.lastName});
+               JFrame newWindow = new JFrame();
+               Dimension screenSize = Helper.shared.getScreenSize();
+               newWindow.setSize((int)(screenSize.width*0.3),(int)(screenSize.height*0.3));
+               newWindow.setLocation((int)(screenSize.width*0.25),(int)(screenSize.height*0.25));
+               newWindow.setTitle("Update");
+               newWindow.add(view.getRegistrationPanel());
+               newWindow.setVisible(true);
            }
        });
        window.setVisible(true);

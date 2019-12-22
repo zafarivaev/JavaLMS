@@ -30,79 +30,6 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <grid id="16a47" binding="StudentButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-                    <constraints border-constraint="North"/>
-                    <properties>
-                      <background color="-1"/>
-                    </properties>
-                    <border type="none"/>
-                    <children>
-                      <component id="4f87" class="javax.swing.JButton" binding="addStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <enabled value="true"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Add"/>
-                        </properties>
-                      </component>
-                      <component id="c6382" class="javax.swing.JButton" binding="editStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Edit"/>
-                        </properties>
-                      </component>
-                      <component id="b4b4c" class="javax.swing.JButton" binding="deleteStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Delete"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </grid>
-                  <grid id="b6fd8" binding="Student_BookButtonPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-                    <constraints border-constraint="South"/>
-                    <properties>
-                      <background color="-1"/>
-                    </properties>
-                    <border type="none"/>
-                    <children>
-                      <component id="48bb5" class="javax.swing.JButton" binding="returnStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Return"/>
-                        </properties>
-                      </component>
-                      <component id="717ff" class="javax.swing.JButton" binding="faneStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Fane"/>
-                        </properties>
-                      </component>
-                      <component id="f7831" class="javax.swing.JButton" binding="button3" default-binding="true">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Button"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </grid>
                   <scrollpane id="bbdab">
                     <constraints border-constraint="Center"/>
                     <properties/>
@@ -160,6 +87,15 @@
                           <text value="Delete"/>
                         </properties>
                       </component>
+                      <component id="eef25" class="javax.swing.JButton" binding="returnButton" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <text value="Return"/>
+                        </properties>
+                      </component>
                     </children>
                   </grid>
                   <grid id="5fafa" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
@@ -198,6 +134,17 @@
                           <font name="Arial" size="16" style="0"/>
                           <foreground color="-12622362"/>
                           <text value="Delete"/>
+                        </properties>
+                      </component>
+                      <component id="6875e" class="javax.swing.JButton" binding="saveButton" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <enabled value="false"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <hideActionText value="false"/>
+                          <text value="Save"/>
                         </properties>
                       </component>
                     </children>
