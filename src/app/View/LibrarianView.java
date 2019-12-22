@@ -15,10 +15,6 @@ public class LibrarianView {
 
     // Student getters
 
-    public JButton getAddStudentButton(){return  librarianForm.addStudentButton;}
-
-    public JButton getEditStudentButton(){return librarianForm.editStudentButton;}
-
     public JButton getDeleteStudentButton(){return librarianForm.deleteStudentButton;}
 
     // Profile getters
@@ -38,6 +34,12 @@ public class LibrarianView {
     public JButton getDeleteProfileButton(){return  librarianForm.deleteProfileButton;}
 
     // Lists
+
+    public JButton getAddBookButton(){return librarianForm.addBookButton;}
+
+    public JButton getEditBookButton(){return librarianForm.editBookButton;}
+
+    public JButton getDeleteBookButton(){return librarianForm.deleteBookButton;}
 
     private static LibrarianForm librarianForm;
 }

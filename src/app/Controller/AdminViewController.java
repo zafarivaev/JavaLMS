@@ -39,24 +39,6 @@ class AdminViewController extends ViewController{
         showLibrarians();
         showStudents();
 
-       view.getAddLibrarianButton().addActionListener(new ActionListener() {
-           @Override
-           public void actionPerformed(ActionEvent actionEvent) {
-               Helper.shared.print("Add in admin librarians");
-
-//               // Mock librarian
-//               Librarian mockLibrarian = new Librarian("Zafar",
-//                       "Ivaev",
-//                       Gender.male,
-//                       "z.ivaev@mail.ru",
-//                       "pass123");
-//
-//
-//               librariansModel.addRow(new Object[]{
-//                       mockLibrarian.firstName,
-//                       mockLibrarian.lastName});
-           }
-       });
        window.setVisible(true);
     }
 

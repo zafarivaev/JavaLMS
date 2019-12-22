@@ -59,26 +59,6 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="a648b" class="javax.swing.JButton" binding="addLibrarianButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Add"/>
-                        </properties>
-                      </component>
-                      <component id="c4428" class="javax.swing.JButton" binding="editLibrarianButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <enabled value="true"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <hideActionText value="false"/>
-                          <text value="Edit"/>
-                        </properties>
-                      </component>
                       <component id="53187" class="javax.swing.JButton" binding="deleteLibrarianButton">
                         <constraints/>
                         <properties>
@@ -109,25 +89,6 @@
                     </properties>
                     <border type="empty"/>
                     <children>
-                      <component id="23bcc" class="javax.swing.JButton" binding="addStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <enabled value="true"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Add"/>
-                        </properties>
-                      </component>
-                      <component id="e6722" class="javax.swing.JButton" binding="editStudentButton">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <text value="Edit"/>
-                        </properties>
-                      </component>
                       <component id="8c204" class="javax.swing.JButton" binding="deleteStudentButton">
                         <constraints/>
                         <properties>
@@ -202,6 +163,17 @@
                           <font name="Arial" size="16" style="0"/>
                           <foreground color="-12622362"/>
                           <text value="Delete"/>
+                        </properties>
+                      </component>
+                      <component id="14bf7" class="javax.swing.JButton" binding="saveButton" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <enabled value="false"/>
+                          <font name="Arial" size="16" style="0"/>
+                          <foreground color="-12622362"/>
+                          <hideActionText value="false"/>
+                          <text value="Save"/>
                         </properties>
                       </component>
                     </children>
