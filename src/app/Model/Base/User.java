@@ -20,6 +20,10 @@ public class User {
 
     UserRole userRole;
 
+    public User(){
+
+    }
+
     public User(String firstName,
                 String lastName,
                 Gender gender,

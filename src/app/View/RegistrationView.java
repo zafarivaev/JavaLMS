@@ -26,6 +26,10 @@ public class RegistrationView {
 
     public JButton getBackButton(){return registrationForm.backButton;}
 
+    public JRadioButton getMaleRadioButton(){return registrationForm.maleRadioButton;}
+
+    public JRadioButton getFemaleRadioButton(){return registrationForm.femaleRadioButton;}
+
     private static RegistrationForm registrationForm;
 
 }

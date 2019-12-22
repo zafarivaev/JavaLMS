@@ -8,6 +8,9 @@ import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable(tableName = "student")
 public class Student extends User {
+    public Student(){
+
+    }
     public Student(String firstName,
                      String lastName,
                      Gender gender,

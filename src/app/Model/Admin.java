@@ -20,7 +20,9 @@ import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable(tableName = "admins")
 public class Admin extends User {
+    public Admin(){
 
+    }
     public Admin(String firstName,
                      String lastName,
                      Gender gender,

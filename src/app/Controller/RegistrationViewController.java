@@ -2,6 +2,7 @@ package app.Controller;
 
 import app.Controller.Base.ViewController;
 import app.Model.Account;
+import app.Model.Admin;
 import app.Util.DatabaseProvider;
 import app.Util.UserRole;
 import app.View.RegistrationView;
@@ -11,6 +12,7 @@ import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import org.h2.engine.Database;
+import org.h2.engine.User;
 
 import javax.sql.DataSource;
 
@@ -49,40 +51,47 @@ class RegistrationViewController extends ViewController {
                         "Error",JOptionPane.ERROR_MESSAGE);
             }
             else {
-
-                String databaseUrl = DatabaseProvider.databaseURL;
-                // create a connection source to our database
-                ConnectionSource connectionSource = DatabaseProvider.connectionSource();
-
-                // instantiate the dao
-                Dao<Account, String> accountDao =
-                        DatabaseProvider.provideDao(Account.class);
-
-                // if you need to create the 'accounts' table make this call
-                DatabaseProvider.createTableIfNotExists(connectionSource, Account.class);
-
+                String[] info = new String[5];
                 switch (userRole){
                     case Admin:
-
+                        info[0] = view.getNameField().getText();
+                        info[1] = view.getLastNameField().getText();
+                        if(view.getMaleRadioButton().isSelected()){
+                            info[2] = "Male";
+                        }
+                        else{
+                            info[2] = "Female";
+                        }
+                        info[3] = view.getEMail().getText();
+                        info[4] = view.getPasswordField().getPassword().toString();
+                        DatabaseProvider.addAdmin(info);
+                    case Librarian:
+                        info[0] = view.getNameField().getText();
+                        info[1] = view.getLastNameField().getText();
+                        if(view.getMaleRadioButton().isSelected()){
+                            info[2] = "Male";
+                        }
+                        else{
+                            info[2] = "Female";
+                        }
+                        info[3] = view.getEMail().getText();
+                        info[4] = view.getPasswordField().getPassword().toString();
+                        DatabaseProvider.addLibrarian(info);
+                    case Student:
+                        info[0] = view.getNameField().getText();
+                        info[1] = view.getLastNameField().getText();
+                        if(view.getMaleRadioButton().isSelected()){
+                            info[2] = "Male";
+                        }
+                        else{
+                            info[2] = "Female";
+                        }
+                        info[3] = view.getEMail().getText();
+                        info[4] = view.getPasswordField().getPassword().toString();
+                        DatabaseProvider.addStudent(info);
                 }
-                // create an instance of Account
-                Account account = new Account();
-                view.getNameField().getText();
-                account.setName("Alex");
-
-                // persist the account object to the database
-                DatabaseProvider.create(account);
-
-                System.out.println("Account: " + DatabaseProvider.queryForAll());
-                ArrayList<Account> accountArrayList = new ArrayList<>();
-                accountArrayList = (ArrayList<Account>) DatabaseProvider.queryForAll();
-                for(Account obj:accountArrayList){
-                    System.out.print(obj.getName());
-                    System.out.println(obj.getPassword());
-                }
-
-//                window.getContentPane().removeAll();
-//                new LogInViewController(userRole);
+               window.getContentPane().removeAll();
+               new LogInViewController(userRole);
             }
         });
 

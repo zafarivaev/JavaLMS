@@ -11,6 +11,10 @@ import java.util.Date;
 @DatabaseTable(tableName = "librarian")
 public class Librarian extends User {
 
+    public Librarian(){
+
+    }
+
     public Librarian(String firstName,
                  String lastName,
                  Gender gender,
@@ -18,7 +22,6 @@ public class Librarian extends User {
                  String password) {
         super(firstName, lastName, gender, email, password, UserRole.Librarian);
     }
-
 }
 
 
