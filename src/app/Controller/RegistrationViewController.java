@@ -61,9 +61,13 @@ class RegistrationViewController extends ViewController {
                 // if you need to create the 'accounts' table make this call
                 DatabaseProvider.createTableIfNotExists(connectionSource, Account.class);
 
+                switch (userRole){
+                    case Admin:
 
+                }
                 // create an instance of Account
                 Account account = new Account();
+                view.getNameField().getText();
                 account.setName("Alex");
 
                 // persist the account object to the database

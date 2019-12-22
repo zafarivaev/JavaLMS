@@ -56,79 +56,12 @@
                       </component>
                     </children>
                   </grid>
-                  <tabbedpane id="529a7" binding="BookPane">
+                  <scrollpane id="b5d0a">
                     <constraints border-constraint="Center"/>
-                    <properties>
-                      <background color="-1"/>
-                      <font name="Arial" size="18" style="0"/>
-                      <foreground color="-12622362"/>
-                    </properties>
+                    <properties/>
                     <border type="none"/>
-                    <children>
-                      <grid id="81da4" binding="BookPublishDatePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
-                        <constraints>
-                          <tabbedpane title="Publish date"/>
-                        </constraints>
-                        <properties>
-                          <background color="-1"/>
-                        </properties>
-                        <border type="none"/>
-                        <children>
-                          <scrollpane id="539a7" binding="PublishDateScrollPane">
-                            <constraints border-constraint="Center"/>
-                            <properties/>
-                            <border type="none"/>
-                            <children/>
-                          </scrollpane>
-                        </children>
-                      </grid>
-                      <grid id="2c456" binding="BookTitlePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
-                        <constraints>
-                          <tabbedpane title="Title"/>
-                        </constraints>
-                        <properties/>
-                        <border type="none"/>
-                        <children>
-                          <scrollpane id="bae94" binding="TitleScrollPane">
-                            <constraints border-constraint="Center"/>
-                            <properties/>
-                            <border type="none"/>
-                            <children/>
-                          </scrollpane>
-                        </children>
-                      </grid>
-                      <grid id="427bd" binding="BookSubjectPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
-                        <constraints>
-                          <tabbedpane title="Subject"/>
-                        </constraints>
-                        <properties/>
-                        <border type="none"/>
-                        <children>
-                          <scrollpane id="ae134" binding="SubjectScrollPane">
-                            <constraints border-constraint="Center"/>
-                            <properties/>
-                            <border type="none"/>
-                            <children/>
-                          </scrollpane>
-                        </children>
-                      </grid>
-                      <grid id="40981" binding="BookISBNPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
-                        <constraints>
-                          <tabbedpane title="ISBN"/>
-                        </constraints>
-                        <properties/>
-                        <border type="none"/>
-                        <children>
-                          <scrollpane id="d3302" binding="ISBNScrollPane">
-                            <constraints border-constraint="Center"/>
-                            <properties/>
-                            <border type="none"/>
-                            <children/>
-                          </scrollpane>
-                        </children>
-                      </grid>
-                    </children>
-                  </tabbedpane>
+                    <children/>
+                  </scrollpane>
                 </children>
               </grid>
               <grid id="7f1df" binding="MyBooksSetting" layout-manager="BorderLayout" hgap="0" vgap="0">

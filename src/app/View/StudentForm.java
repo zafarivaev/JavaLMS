@@ -20,15 +20,6 @@ public class StudentForm {
     public JPanel AllBookSettings;
     public JPanel BookButtonPanel;
     public JButton reserveBookButton;
-    public JTabbedPane BookPane;
-    public JPanel BookPublishDatePanel;
-    public JScrollPane PublishDateScrollPane;
-    public JPanel BookTitlePanel;
-    public JScrollPane TitleScrollPane;
-    public JPanel BookSubjectPanel;
-    public JScrollPane SubjectScrollPane;
-    public JPanel BookISBNPanel;
-    public JScrollPane ISBNScrollPane;
     public JPanel TopTitlePanel;
     public JLabel titleLabel;
     public JPanel ProfileSettings;
