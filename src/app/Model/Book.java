@@ -4,14 +4,17 @@ import java.util.Date;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName = "book")
+@DatabaseTable(tableName = "books")
 public class Book {
     @DatabaseField(id = true)
-    private String title;
+    public
+    String title;
     @DatabaseField
-    private Date date;
+    public
+    Date date;
     @DatabaseField
-    private String authorName;
+    public
+    String authorName;
 
     public Book(String title, Date date, String authorName) {
         this.title = title;

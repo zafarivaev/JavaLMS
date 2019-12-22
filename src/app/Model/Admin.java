@@ -4,30 +4,46 @@ import app.Model.Base.User;
 import app.Util.Gender;
 import app.Util.UserRole;
 
-//public class Admin extends User {
-//
-//    public Admin(String firstName,
-//                 String lastName,
-//                 Gender gender,
-//                 String email,
-//                 String password) {
-//        super(firstName, lastName, gender, email, password, UserRole.Admin);
-//    }
-//}
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable(tableName = "admins")
-public class Admin extends User {
+public class Admin {
+
+    @DatabaseField
+    public
+    String firstName;
+
+    @DatabaseField
+    public
+    String lastName;
+
+    @DatabaseField
+    public
+    Gender gender;
+
+    @DatabaseField(id = true)
+    public
+    String email;
+
+    @DatabaseField
+    public
+    String password;
+
     public Admin(){
 
     }
+
     public Admin(String firstName,
-                     String lastName,
-                     Gender gender,
-                     String email,
-                     String password) {
-        super(firstName, lastName, gender, email, password, UserRole.Admin);
+                 String lastName,
+                 Gender gender,
+                 String email,
+                 String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.email = email;
+        this.password = password;
     }
 }
