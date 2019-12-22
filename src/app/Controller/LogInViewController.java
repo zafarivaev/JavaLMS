@@ -47,17 +47,22 @@ class LogInViewController extends ViewController {
                             inputEmail,
                             DatabaseProvider.provideAdminDao());
 
-                    assert admin != null;
+                    if (admin != null){
 
                     if (inputPassword.equals(admin.password)) {
                         window.getContentPane().removeAll();
+                        AdminViewController.admin = admin;
                         new AdminViewController();
                     } else {
-                            JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
-                                    "Error",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Invalid credentials",
+                                "Error", JOptionPane.ERROR_MESSAGE);
 
                         System.out.println("input password: " + inputPassword +
-                                 " \nactual user's password: " + admin.password);
+                                " \nactual user's password: " + admin.password);
+                    }
+                } else {
+                        JOptionPane.showMessageDialog(null,"Invalid credentials",
+                                "Error",JOptionPane.ERROR_MESSAGE);
                     }
                     break;
                 case Librarian:
@@ -67,16 +72,21 @@ class LogInViewController extends ViewController {
                                             inputEmail,
                                             DatabaseProvider.provideLibrarianDao());
 
-                    assert librarian != null;
+                    if (librarian != null) {
 
                     if (inputPassword.equals(librarian.password)) {
                         window.getContentPane().removeAll();
+                        LibrarianViewController.librarian = librarian;
                         new LibrarianViewController();
                     } else {
-                        JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
-                                "Error",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "You have to fill all fields!!!",
+                                "Error", JOptionPane.ERROR_MESSAGE);
                         System.out.println("input password: " + inputPassword +
                                 " \nactual user's password: " + librarian.password);
+                    }
+                } else {
+                        JOptionPane.showMessageDialog(null,"Invalid credentials",
+                                "Error",JOptionPane.ERROR_MESSAGE);
                     }
                     break;
                 case Student:
@@ -86,16 +96,20 @@ class LogInViewController extends ViewController {
                                             inputEmail,
                                             DatabaseProvider.provideStudentDao());
 
-                    assert student != null;
+                    if (student != null) {
 
-                    if (inputPassword.equals(student.password)) {
-                        window.getContentPane().removeAll();
-                        new StudentViewController();
+                        if (inputPassword.equals(student.password)) {
+                            window.getContentPane().removeAll();
+                            new StudentViewController();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "You have to fill all fields!!!",
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+                            System.out.println("input password: " + inputPassword +
+                                    " \nactual user's password: " + student.password);
+                        }
                     } else {
-                        JOptionPane.showMessageDialog(null,"You have to fill all fields!!!",
+                        JOptionPane.showMessageDialog(null,"Invalid credentials",
                                 "Error",JOptionPane.ERROR_MESSAGE);
-                        System.out.println("input password: " + inputPassword +
-                                " \nactual user's password: " + student.password);
                     }
                     break;
                 default:

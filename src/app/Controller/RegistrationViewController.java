@@ -60,25 +60,33 @@ class RegistrationViewController extends ViewController {
 
                 switch (userRole){
                     case Admin:
-                        DatabaseProvider.add(new Admin(
+
+                        Admin newAdmin = new Admin(
                                 firstName,
                                 lastName,
                                 gender,
                                 email,
-                                password), DatabaseProvider.provideAdminDao());
+                        password);
+
+                        DatabaseProvider.add(newAdmin, DatabaseProvider.provideAdminDao());
 
                         window.getContentPane().removeAll();
+                        AdminViewController.admin = newAdmin;
                         new AdminViewController();
                         break;
                     case Librarian:
-                        DatabaseProvider.add(new Librarian(
+
+                        Librarian newLibrarian = new Librarian(
                                 firstName,
                                 lastName,
                                 gender,
                                 email,
-                                password), DatabaseProvider.provideLibrarianDao());
+                                password);
+
+                        DatabaseProvider.add(newLibrarian, DatabaseProvider.provideLibrarianDao());
 
                         window.getContentPane().removeAll();
+                        LibrarianViewController.librarian = newLibrarian;
                         new LibrarianViewController();
                         break;
                     case Student:

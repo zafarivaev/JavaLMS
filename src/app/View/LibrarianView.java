@@ -41,5 +41,7 @@ public class LibrarianView {
 
     public JButton getDeleteBookButton(){return librarianForm.deleteBookButton;}
 
+    public JTable getStudentsTable() { return librarianForm.studentsTable; }
+
     private static LibrarianForm librarianForm;
 }

@@ -19,6 +19,8 @@ class AdminViewController extends ViewController{
 
     private static AdminView view;
 
+    public static Admin admin;
+
     private static DefaultTableModel librariansModel;
     private static DefaultTableModel studentsModel;
 
@@ -38,6 +40,8 @@ class AdminViewController extends ViewController{
 
         showLibrarians();
         showStudents();
+
+        showProfile();
 
        window.setVisible(true);
     }
@@ -82,6 +86,16 @@ class AdminViewController extends ViewController{
         }
 
         view.getStudentsTable().setModel(studentsModel);
+    }
+
+    // SHOW PROFILE
+    private static void showProfile() {
+
+        view.getNameField().setText(admin.firstName);
+        view.getLastNameField().setText(admin.lastName);
+        view.getGenderField().setText(admin.gender.toString());
+        view.getEmailField().setText(admin.email);
+        view.getPasswordField().setText(admin.password);
     }
 
 }

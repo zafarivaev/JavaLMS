@@ -165,17 +165,6 @@
                           <text value="Delete"/>
                         </properties>
                       </component>
-                      <component id="14bf7" class="javax.swing.JButton" binding="saveButton" default-binding="true">
-                        <constraints/>
-                        <properties>
-                          <background color="-1"/>
-                          <enabled value="false"/>
-                          <font name="Arial" size="16" style="0"/>
-                          <foreground color="-12622362"/>
-                          <hideActionText value="false"/>
-                          <text value="Save"/>
-                        </properties>
-                      </component>
                     </children>
                   </grid>
                   <grid id="c64ba" binding="ProfileInfoPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -217,7 +206,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                               <text value=""/>
                             </properties>
@@ -293,7 +282,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                               <text value=""/>
                             </properties>
@@ -310,7 +299,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
@@ -326,7 +315,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
@@ -342,7 +331,7 @@
                               <enabled value="false"/>
                               <font name="Arial" size="16" style="0"/>
                               <foreground color="-16777216"/>
-                              <margin top="3" left="8" bottom="3" right="8"/>
+                              <margin top="2" left="6" bottom="2" right="6"/>
                               <opaque value="true"/>
                             </properties>
                           </component>
