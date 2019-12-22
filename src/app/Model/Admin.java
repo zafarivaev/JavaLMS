@@ -1,8 +1,6 @@
 package app.Model;
 
-import app.Model.Base.User;
 import app.Util.Gender;
-import app.Util.UserRole;
 
 
 import com.j256.ormlite.field.DatabaseField;
